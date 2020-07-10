@@ -18,6 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+//    id obj = [NSObject new];
+//    if ([obj respondsToSelector:@selector(editMode)]) {
+//        NSLog(@"---");
+//    }
 }
 
 - (void)didReceiveMemoryWarning
