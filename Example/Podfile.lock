@@ -1,0 +1,16 @@
+PODS:
+  - SJListkit (0.1.0)
+
+DEPENDENCIES:
+  - SJListkit (from `../`)
+
+EXTERNAL SOURCES:
+  SJListkit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SJListkit: aa7c3f2f6a4e70cef7aa54f3805c5af402f17f01
+
+PODFILE CHECKSUM: 6f5f5459a154d3a03e5b2d97a8493cc3a2948c60
+
+COCOAPODS: 1.8.4
