@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'SJListkit_Example' do
+  pod 'SJListkit', :path => '../'
+
+  target 'SJListkit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
