@@ -12,6 +12,8 @@
 		0C06E22A24D9562F009ABC0B /* MCCollectionViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C06E22924D9562F009ABC0B /* MCCollectionViewCell1.m */; };
 		0C06E22D24D9564B009ABC0B /* MCCellModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C06E22C24D9564B009ABC0B /* MCCellModel1.m */; };
 		0C85052624D84068007B22E4 /* MCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C85052524D84068007B22E4 /* MCCollectionViewCell.m */; };
+		0C8749E824D9BD5400326424 /* MCAdapter1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8749E724D9BD5400326424 /* MCAdapter1.m */; };
+		0C8749EB24D9BD6500326424 /* MCAdapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8749EA24D9BD6500326424 /* MCAdapter2.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -50,6 +52,10 @@
 		0C1F08952A9813F41A0AE84E /* libPods-SJListkit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJListkit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C85052424D84068007B22E4 /* MCCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCCollectionViewCell.h; sourceTree = "<group>"; };
 		0C85052524D84068007B22E4 /* MCCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCCollectionViewCell.m; sourceTree = "<group>"; };
+		0C8749E624D9BD5400326424 /* MCAdapter1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAdapter1.h; sourceTree = "<group>"; };
+		0C8749E724D9BD5400326424 /* MCAdapter1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAdapter1.m; sourceTree = "<group>"; };
+		0C8749E924D9BD6500326424 /* MCAdapter2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAdapter2.h; sourceTree = "<group>"; };
+		0C8749EA24D9BD6500326424 /* MCAdapter2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAdapter2.m; sourceTree = "<group>"; };
 		20638B8D6A84FB93A20C125D /* SJListkit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SJListkit.podspec; path = ../SJListkit.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SJListkit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJListkit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -151,6 +157,10 @@
 				6003F5A6195388D20070C39A /* MCViewController.m */,
 				0C85052424D84068007B22E4 /* MCCollectionViewCell.h */,
 				0C85052524D84068007B22E4 /* MCCollectionViewCell.m */,
+				0C8749E624D9BD5400326424 /* MCAdapter1.h */,
+				0C8749E724D9BD5400326424 /* MCAdapter1.m */,
+				0C8749E924D9BD6500326424 /* MCAdapter2.h */,
+				0C8749EA24D9BD6500326424 /* MCAdapter2.m */,
 				0C06E22524D94FA4009ABC0B /* MCCellModel.h */,
 				0C06E22624D94FA4009ABC0B /* MCCellModel.m */,
 				0C06E22B24D9564B009ABC0B /* MCCellModel1.h */,
@@ -369,8 +379,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C06E22D24D9564B009ABC0B /* MCCellModel1.m in Sources */,
+				0C8749E824D9BD5400326424 /* MCAdapter1.m in Sources */,
 				0C85052624D84068007B22E4 /* MCCollectionViewCell.m in Sources */,
 				0C06E22724D94FA4009ABC0B /* MCCellModel.m in Sources */,
+				0C8749EB24D9BD6500326424 /* MCAdapter2.m in Sources */,
 				0C06E22A24D9562F009ABC0B /* MCCollectionViewCell1.m in Sources */,
 				6003F59E195388D20070C39A /* MCAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MCViewController.m in Sources */,

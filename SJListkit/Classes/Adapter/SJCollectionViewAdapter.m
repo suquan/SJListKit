@@ -9,7 +9,7 @@
 #import "MessageInterceptor.h"
 #import "SJCollectionViewProtocols.h"
 #import "SJCollectionViewCell.h"
-
+#import "SJCollectionViewSectionModel.h"
 
 
 @interface SJCollectionViewAdapter ()
@@ -18,14 +18,30 @@
 
 @end
 
+static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
+
 @implementation SJCollectionViewAdapter
+
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        allSectionModels = [NSMutableArray array];
+    });
+}
 
 - (void)setCollectionView:(UICollectionView *)collectionView
 {
     _collectionView = collectionView;
 //    collectionView.delegate = (id <UICollectionViewDelegate>)self.delegateInterceptor;
-    collectionView.dataSource = self;
-    collectionView.delegate = self;
+//    collectionView.dataSource = self;
+//    collectionView.delegate = self;
+}
+
+-(void)setSectionModels:(NSArray<SJCollectionViewSectionModel *> *)sectionModels
+{
+    _sectionModels = sectionModels;
+    [allSectionModels addObjectsFromArray:sectionModels];
 }
 
 
@@ -61,14 +77,18 @@
 }
 
 #pragma mark UICollectionViewDelegate
-//这里需要处理优先级，Adapter 子类中优先级最高，cell 对应的model 中次之，
+//这里需要处理优先级，Adapter  优先级高低 cellModel > adapter 子类 > 外层控制器
 
 /// 每个cell 的size
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return CGSizeZero;
+    if ([self respondsToSelector:@selector(sizeForItemAtIndexPath)]) {
+//        return [self sizeForItemAtIndexPath];
+    }
+    
+    return CGSizeMake(100, 100);
 }
 
 /// section 的上下左右 间距

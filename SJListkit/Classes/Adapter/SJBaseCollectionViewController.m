@@ -6,8 +6,11 @@
 //
 
 #import "SJBaseCollectionViewController.h"
+#import "SJDispatcher.h"
 
 @interface SJBaseCollectionViewController ()<UICollectionViewDelegate>
+
+@property (nonatomic,strong) SJDispatcher *dispatcher;
 
 @end
 
@@ -18,6 +21,11 @@
     [self.view addSubview:self.collectionView];
 }
 
+- (void)addAdapter:(SJCollectionViewAdapter *)adapter
+{
+    self.dispatcher 
+}
+
 - (UICollectionView *)collectionView {
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds
@@ -25,6 +33,8 @@
         _collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _collectionView.backgroundColor = [UIColor colorWithRed:244 green:244 blue:244 alpha:1.0];
         _collectionView.alwaysBounceVertical = YES;
+        _collectionView.dataSource = self.dispatcher;
+        _collectionView.delegate = self.dispatcher;
     }
     
     return _collectionView;
@@ -35,6 +45,14 @@
         _collectionViewLayout = [[UICollectionViewFlowLayout alloc] init];
     }
     return _collectionViewLayout;
+}
+
+- (SJDispatcher *)dispatcher
+{
+    if (!_dispatcher) {
+        _dispatcher = [[SJDispatcher alloc]init];
+    }
+    return _dispatcher;
 }
 
 @end

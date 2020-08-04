@@ -8,7 +8,7 @@
 
 @import UIKit;
 #import <SJListkit/SJBaseCollectionViewController.h>
-#import <SJListkit/SJCollectionViewAdapter.h>
+//#import <SJListkit/SJCollectionViewAdapter.h>
 
 @interface MCViewController : SJBaseCollectionViewController
 

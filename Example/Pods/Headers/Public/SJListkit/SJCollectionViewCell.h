@@ -1,0 +1,1 @@
+../../../../../SJListkit/Classes/Adapter/SJCollectionViewCell.h

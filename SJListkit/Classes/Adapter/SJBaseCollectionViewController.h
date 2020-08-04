@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SJCollectionViewAdapter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UICollectionView *collectionView;
 
 @property (strong, nonatomic) UICollectionViewFlowLayout *collectionViewLayout;
+
+- (void)addAdapter:(SJCollectionViewAdapter *)adapter;
 
 @end
 
