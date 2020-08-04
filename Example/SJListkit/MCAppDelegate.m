@@ -7,12 +7,20 @@
 //
 
 #import "MCAppDelegate.h"
+#import "MCViewController.h"
 
 @implementation MCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MCViewController alloc] init]];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
