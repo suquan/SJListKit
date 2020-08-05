@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol SJCollectionViewCellProtocol <NSObject>
+@protocol SJCollectionCellModelProtocol <NSObject>
 
 @property (nonatomic, strong) id dataModel;
 
@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *identifier;
 
 @property (nonatomic, assign) CGFloat *itemHeight;
+
+@property (nonatomic, assign)CGSize sizeForItem;
 
 @end
 

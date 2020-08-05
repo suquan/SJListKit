@@ -6,12 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SJCollectionViewCellProtocol.h"
+#import "SJCollectionCellModelProtocol.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SJCollectionViewCellModel : NSObject<SJCollectionViewCellProtocol>
+@interface SJCollectionViewCellModel : NSObject<SJCollectionCellModelProtocol>
 
 
 @end

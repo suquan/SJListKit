@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SJCollectionViewProtocols.h"
+#import "SJCollectionViewCellProtocols.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

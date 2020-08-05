@@ -64,7 +64,7 @@
     }
     
     self.adapter1.sectionModels = sections;
-    [self.collectionView reloadData];
+    [self addAdapter:self.adapter1];
 }
 
 
@@ -89,6 +89,6 @@
     }
     
     self.adapter2.sectionModels = sections;
-    [self.collectionView reloadData];
+    [self addAdapter:self.adapter2];
 }
 @end

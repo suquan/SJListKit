@@ -23,7 +23,8 @@
 
 - (void)addAdapter:(SJCollectionViewAdapter *)adapter
 {
-    self.dispatcher 
+    [self.dispatcher digestAdapter:adapter];
+    [self.collectionView reloadData];
 }
 
 - (UICollectionView *)collectionView {
@@ -51,6 +52,7 @@
 {
     if (!_dispatcher) {
         _dispatcher = [[SJDispatcher alloc]init];
+        _dispatcher.controllerDelegate = self;
     }
     return _dispatcher;
 }

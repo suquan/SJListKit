@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SJDispatcher : NSObject
+@interface SJDispatcher : NSObject<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>
+
+@property (nonatomic,weak)id<UICollectionViewDelegateFlowLayout> controllerDelegate;
 
 - (void)digestAdapter:(SJCollectionViewAdapter *)adapter;
 

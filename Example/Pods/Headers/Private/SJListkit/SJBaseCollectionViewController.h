@@ -1,1 +1,1 @@
-../../../../../SJListkit/Classes/Adapter/SJBaseCollectionViewController.h
+../../../../../SJListkit/Classes/Controller/SJBaseCollectionViewController.h

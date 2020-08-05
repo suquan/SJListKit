@@ -7,99 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AFE99540D3BB96C50A21386487C3632 /* SJCollectionViewCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A2DD8783C214F34DE3B056F13C31EBD /* SJCollectionViewCellModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0CAAC1FC209666F6B935C1879E76F580 /* Pods-SJListkit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE50BA89CC9AEF06883CF500851A015A /* Pods-SJListkit_Tests-dummy.m */; };
-		1BAA220AD930312754369F1F5AEB5347 /* Pods-SJListkit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE501C9BABCF4E731BD0B7D9D2AF896 /* Pods-SJListkit_Example-dummy.m */; };
-		2721D48358143CDBAAA9CFFD3D29906D /* SJBaseCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 012D0862B3D09CD314224FC4CD73FD0A /* SJBaseCollectionViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2FD32557F069128D020E15D46E87A21C /* SJCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A4C251A544012E04F5A8B74E4E6CF9D6 /* SJCollectionViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4389E3F0852DE406F340F84F875C5E34 /* SJDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 635172384AAA837114254A12918F9DE9 /* SJDispatcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		48F279EE54547BD9AE69FE53FE139887 /* MessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 492E3E4C10EA53E8DDF7AAE486A2CF57 /* MessageInterceptor.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4B818EC0AB2461FF8A9CB0AF9025493C /* SJBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EDBC834EC4DDE4B82AAD395AB3A121 /* SJBaseCollectionViewController.m */; };
-		582EAE2644652888677529492674509C /* SJCollectionViewCellProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDD7DF7F61DA684848FAABC0F72A10F /* SJCollectionViewCellProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5A81C60A03F66F3F791306B77841F699 /* MessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4365A981AE048B3277D40E4D5326DA /* MessageInterceptor.m */; };
-		5A988F69DD418224051B5CBE40EAC6A3 /* SJDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E37EA1756EF790C7ABDD0E16A5B7DB3 /* SJDispatcher.m */; };
-		66CB7E146ABA5D4554CD2EAE712A5A0B /* SJCollectionViewProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = E0E0BDBE0DD7D06B757A0A97AA13B907 /* SJCollectionViewProtocols.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AE895B7EB81CF013D10116FB2BCDED3A /* SJListkit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3318B23243E44FFAEC4F3811BD117E0 /* SJListkit-dummy.m */; };
-		BE19707E039A278DF2D6038369EEEF73 /* SJCollectionViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CAFC3BB55126CE2F9FC2CF0431229E /* SJCollectionViewAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C97DE07070B5F0844857C6662BE8D50C /* SJCollectionViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BF068EF948EF5CBEE7815FB670507 /* SJCollectionViewAdapter.m */; };
-		DE97580795F04B8551B105294DE8C07E /* SJCollectionViewSectionModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D71C1AE1E64C1E4F9BB5F28CEC6EDB /* SJCollectionViewSectionModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E014A65742B0AC1FE6CAC4CF0D1B7DC1 /* SJCollectionViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6ADB052B7108710934EAD628DBE15 /* SJCollectionViewCellModel.m */; };
-		E829B7CCC5C94D8684CD60F3E7188790 /* SJCollectionViewSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FDF6A006BDA502D639492EF45D004B /* SJCollectionViewSectionModel.m */; };
-		FDA35064BD19150085B6B8EF057C8CD0 /* SJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C2334C4965DF156A0FF55CD67A24E4 /* SJCollectionViewCell.m */; };
+		02B3ABA863E2DCABED82D5549D2E96ED /* SJDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B9BB637349AF6AE99EA18546169063 /* SJDispatcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0C136AC54C0490C25F09E08C87B8C402 /* SJDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BFC011B1F591A4ADF39ABE34A6B60C /* SJDispatcher.m */; };
+		0C1C024824DAACD100EF7D94 /* SJCollectionModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1C024724DAACD100EF7D94 /* SJCollectionModelProtocol.h */; };
+		0C80C98A5A0DCFE007D3030026673CF4 /* SJMessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8F1D51FCA361318F3EEE1D6CC290FA /* SJMessageInterceptor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B11A6D30C1DA86FC0863174CB86C3BA /* Pods-SJListkit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE501C9BABCF4E731BD0B7D9D2AF896 /* Pods-SJListkit_Example-dummy.m */; };
+		1F84B108650F20101635BE2BA5AD2524 /* SJBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72714B194571CEA41B639F5682BB6C0E /* SJBaseCollectionViewController.m */; };
+		26C752ACFF769B57343AC004790F08C6 /* SJCollectionViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC08A322AE6536B2F0D1A4E1D09EEDD /* SJCollectionViewAdapter.m */; };
+		3FD8B47AF28F70207EE505A79C4FADAB /* SJListkit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D407DA5171864D9E72E4928A755A5285 /* SJListkit-dummy.m */; };
+		51F893D25115FF615CBF0D342DD89BED /* SJCollectionCellModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A99FD6599ABA4644520236B02E75878 /* SJCollectionCellModelProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B1D2A67A01957AE1AE9B991390CB2E0 /* SJBaseCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B5A537D862BA9C52613E6876A5E8459 /* SJBaseCollectionViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5FE24475FF1EE5DB35D30DC60F98D0CB /* Pods-SJListkit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE50BA89CC9AEF06883CF500851A015A /* Pods-SJListkit_Tests-dummy.m */; };
+		61BDCE6E40F0F1D796574AA5CB8E586D /* SJCollectionViewSectionModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0789331D4C60FA41061EDD2E01D2B3E6 /* SJCollectionViewSectionModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		671B8208801D40D9956606B685800D41 /* SJCollectionViewSectionModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 6468433B0B6FA25925C29682C15C79EA /* SJCollectionViewSectionModelProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		69F40E1D494AA8A1EF0A888D753E8F41 /* SJCollectionViewSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F869EC2165C058FC4702D99B9D709928 /* SJCollectionViewSectionModel.m */; };
+		726629453A406FF666887869CD50FD3C /* SJCollectionViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B610AE7545926C0A71C51351134E5B8 /* SJCollectionViewCellModel.m */; };
+		8CCF1AAE67E4F9223B7190DF1A317577 /* SJCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E8840F89DD21888ED68653C837471A29 /* SJCollectionViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C097FECF59A3B6B650CE2B6A28312B78 /* SJCollectionViewCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D9B08B8C8FD4FC36143FFC2FBD89C54 /* SJCollectionViewCellModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E485B552372C813EC750A879DF1F2301 /* SJCollectionViewAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0D93493E1EF16C9D051E6D4D8CF2CD /* SJCollectionViewAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E9D411694D379D7F9D61B3319A281BEB /* SJCollectionViewCellProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 266AA4F0297FC2EC9787D9305FCE6324 /* SJCollectionViewCellProtocols.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F25D25BC9F8DCC6D7724A64C748F8808 /* SJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23635394A63B0C206403DF2576228920 /* SJCollectionViewCell.m */; };
+		FC285B0CA6FBFBD53AD84E859DD3E934 /* SJMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E65670040A3379498C08759EB2485F /* SJMessageInterceptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9973089D28CCC7C736A97FE151ADFC80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EB0257EAC39C6BE3B81948C76B88D73;
-			remoteInfo = SJListkit;
-		};
-		9EFFAE29F1B2B3B8122683D03CBB6EF6 /* PBXContainerItemProxy */ = {
+		734E5DC0CBD7A61DE1C3C44135B1DFD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A1BDFC210385FA0EA29CEDCDF8822DFF;
 			remoteInfo = "Pods-SJListkit_Example";
 		};
+		89C40937569F4762C61A5ABE75C0B14C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EB0257EAC39C6BE3B81948C76B88D73;
+			remoteInfo = SJListkit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0087250B3092AED56223EE026487D386 /* Pods-SJListkit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJListkit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		012D0862B3D09CD314224FC4CD73FD0A /* SJBaseCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJBaseCollectionViewController.h; path = SJListkit/Classes/Adapter/SJBaseCollectionViewController.h; sourceTree = "<group>"; };
-		07CAFC3BB55126CE2F9FC2CF0431229E /* SJCollectionViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJCollectionViewAdapter.h; path = SJListkit/Classes/Adapter/SJCollectionViewAdapter.h; sourceTree = "<group>"; };
-		0C5765366D3493AC632AC545D4D82E72 /* libSJListkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSJListkit.a; path = libSJListkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0789331D4C60FA41061EDD2E01D2B3E6 /* SJCollectionViewSectionModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJCollectionViewSectionModel.h; sourceTree = "<group>"; };
+		0B70ECB9E3AE9D597791DDE852733BA7 /* SJListkit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SJListkit-prefix.pch"; sourceTree = "<group>"; };
+		0C1C024724DAACD100EF7D94 /* SJCollectionModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJCollectionModelProtocol.h; sourceTree = "<group>"; };
+		0C5765366D3493AC632AC545D4D82E72 /* libSJListkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSJListkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D9B08B8C8FD4FC36143FFC2FBD89C54 /* SJCollectionViewCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJCollectionViewCellModel.h; sourceTree = "<group>"; };
+		1A78C183E533EDF035A2542C328015D9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1CE501C9BABCF4E731BD0B7D9D2AF896 /* Pods-SJListkit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJListkit_Example-dummy.m"; sourceTree = "<group>"; };
-		26657626286074167879E9658F34CDE6 /* libPods-SJListkit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SJListkit_Tests.a"; path = "libPods-SJListkit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A2DD8783C214F34DE3B056F13C31EBD /* SJCollectionViewCellModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJCollectionViewCellModel.h; path = SJListkit/Classes/Adapter/SJCollectionViewCellModel.h; sourceTree = "<group>"; };
+		23635394A63B0C206403DF2576228920 /* SJCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJCollectionViewCell.m; sourceTree = "<group>"; };
+		26657626286074167879E9658F34CDE6 /* libPods-SJListkit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJListkit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		266AA4F0297FC2EC9787D9305FCE6324 /* SJCollectionViewCellProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJCollectionViewCellProtocols.h; sourceTree = "<group>"; };
+		2B5A537D862BA9C52613E6876A5E8459 /* SJBaseCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJBaseCollectionViewController.h; sourceTree = "<group>"; };
+		2B8F1D51FCA361318F3EEE1D6CC290FA /* SJMessageInterceptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJMessageInterceptor.h; sourceTree = "<group>"; };
 		320149A054ACD6CAEAC8D8D940E1EA8B /* Pods-SJListkit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJListkit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3300E685F98B2AC9A59F578CA3E0EB0E /* Pods-SJListkit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJListkit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3A620B7F8D12A104D70C1792F97B0E08 /* Pods-SJListkit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJListkit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		492E3E4C10EA53E8DDF7AAE486A2CF57 /* MessageInterceptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageInterceptor.h; path = SJListkit/Classes/Adapter/MessageInterceptor.h; sourceTree = "<group>"; };
-		4BDD7DF7F61DA684848FAABC0F72A10F /* SJCollectionViewCellProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJCollectionViewCellProtocol.h; path = SJListkit/Classes/Adapter/SJCollectionViewCellProtocol.h; sourceTree = "<group>"; };
-		4E37EA1756EF790C7ABDD0E16A5B7DB3 /* SJDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJDispatcher.m; path = SJListkit/Classes/Adapter/SJDispatcher.m; sourceTree = "<group>"; };
-		4E4365A981AE048B3277D40E4D5326DA /* MessageInterceptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MessageInterceptor.m; path = SJListkit/Classes/Adapter/MessageInterceptor.m; sourceTree = "<group>"; };
-		4FF6ADB052B7108710934EAD628DBE15 /* SJCollectionViewCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJCollectionViewCellModel.m; path = SJListkit/Classes/Adapter/SJCollectionViewCellModel.m; sourceTree = "<group>"; };
-		58C68964861CFACB334995462323B23C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		635172384AAA837114254A12918F9DE9 /* SJDispatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJDispatcher.h; path = SJListkit/Classes/Adapter/SJDispatcher.h; sourceTree = "<group>"; };
-		69EDBC834EC4DDE4B82AAD395AB3A121 /* SJBaseCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJBaseCollectionViewController.m; path = SJListkit/Classes/Adapter/SJBaseCollectionViewController.m; sourceTree = "<group>"; };
-		713BF068EF948EF5CBEE7815FB670507 /* SJCollectionViewAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJCollectionViewAdapter.m; path = SJListkit/Classes/Adapter/SJCollectionViewAdapter.m; sourceTree = "<group>"; };
+		4A0D93493E1EF16C9D051E6D4D8CF2CD /* SJCollectionViewAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJCollectionViewAdapter.h; sourceTree = "<group>"; };
+		4AF218C9D8D5FCF64D21D97D62AF79BE /* SJListkit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SJListkit.xcconfig; sourceTree = "<group>"; };
+		5B610AE7545926C0A71C51351134E5B8 /* SJCollectionViewCellModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJCollectionViewCellModel.m; sourceTree = "<group>"; };
+		6468433B0B6FA25925C29682C15C79EA /* SJCollectionViewSectionModelProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJCollectionViewSectionModelProtocol.h; sourceTree = "<group>"; };
+		6A99FD6599ABA4644520236B02E75878 /* SJCollectionCellModelProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJCollectionCellModelProtocol.h; sourceTree = "<group>"; };
+		72714B194571CEA41B639F5682BB6C0E /* SJBaseCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJBaseCollectionViewController.m; sourceTree = "<group>"; };
+		73BFC011B1F591A4ADF39ABE34A6B60C /* SJDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJDispatcher.m; sourceTree = "<group>"; };
 		7934201E85281C450F1F8E9EFE2E7C1E /* Pods-SJListkit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJListkit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		79484F5F859A2DB20CDAA99F7BD7AB73 /* SJListkit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SJListkit.xcconfig; sourceTree = "<group>"; };
-		79771C1FC6F9E5C6F0FE3CF76C274B9B /* libPods-SJListkit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SJListkit_Example.a"; path = "libPods-SJListkit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		898C6675FF4AA5E248E2955F75893430 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		79771C1FC6F9E5C6F0FE3CF76C274B9B /* libPods-SJListkit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJListkit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E65670040A3379498C08759EB2485F /* SJMessageInterceptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJMessageInterceptor.m; sourceTree = "<group>"; };
 		8EC0D734764A83AAA4682226DDB503A4 /* Pods-SJListkit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SJListkit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		95C8F5DA955CC14EFD3FABC494A4A939 /* SJListkit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJListkit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95D71C1AE1E64C1E4F9BB5F28CEC6EDB /* SJCollectionViewSectionModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJCollectionViewSectionModel.h; path = SJListkit/Classes/Adapter/SJCollectionViewSectionModel.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A1C2334C4965DF156A0FF55CD67A24E4 /* SJCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJCollectionViewCell.m; path = SJListkit/Classes/Adapter/SJCollectionViewCell.m; sourceTree = "<group>"; };
-		A4C251A544012E04F5A8B74E4E6CF9D6 /* SJCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJCollectionViewCell.h; path = SJListkit/Classes/Adapter/SJCollectionViewCell.h; sourceTree = "<group>"; };
+		95473935CA6E0B7E91FB39153D5ACA11 /* SJListkit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJListkit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A9B9BB637349AF6AE99EA18546169063 /* SJDispatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJDispatcher.h; sourceTree = "<group>"; };
 		AEAA263906EB84A75913ABA787A36F8F /* Pods-SJListkit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SJListkit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AEC08A322AE6536B2F0D1A4E1D09EEDD /* SJCollectionViewAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJCollectionViewAdapter.m; sourceTree = "<group>"; };
 		B1B7E51599D52FB50929D4052CC1D281 /* Pods-SJListkit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJListkit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B28A2113CB143FF4EDE3C2F23DEAE42A /* SJListkit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SJListkit-prefix.pch"; sourceTree = "<group>"; };
-		B3318B23243E44FFAEC4F3811BD117E0 /* SJListkit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SJListkit-dummy.m"; sourceTree = "<group>"; };
+		B606770B9DFAE7A8AAAFA3BEE4DB9FEF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CE50BA89CC9AEF06883CF500851A015A /* Pods-SJListkit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJListkit_Tests-dummy.m"; sourceTree = "<group>"; };
-		E0E0BDBE0DD7D06B757A0A97AA13B907 /* SJCollectionViewProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJCollectionViewProtocols.h; path = SJListkit/Classes/Adapter/SJCollectionViewProtocols.h; sourceTree = "<group>"; };
-		F2FDF6A006BDA502D639492EF45D004B /* SJCollectionViewSectionModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJCollectionViewSectionModel.m; path = SJListkit/Classes/Adapter/SJCollectionViewSectionModel.m; sourceTree = "<group>"; };
+		D407DA5171864D9E72E4928A755A5285 /* SJListkit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SJListkit-dummy.m"; sourceTree = "<group>"; };
+		E8840F89DD21888ED68653C837471A29 /* SJCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJCollectionViewCell.h; sourceTree = "<group>"; };
+		F869EC2165C058FC4702D99B9D709928 /* SJCollectionViewSectionModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJCollectionViewSectionModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		62830FC51693F76D1142FE60887E67B7 /* Frameworks */ = {
+		195E4E5E9D7CBD6AD6EB858C22271F61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A83A3EF269A3C2BE57B6D8CD08414B91 /* Frameworks */ = {
+		724191CCC14D98D904F6CABFB0F9036C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EEE65E6F4EE181ACCDC8CD39DD43664F /* Frameworks */ = {
+		75F8D7F10A60B3296D21FB61353200F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00BCCC970F73E828BCA96715292849DB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31B09490EB954FAB5D811FC6CD13D1DD /* SJListkit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		03FDF97109DACAD8CD812AD29DADDFA3 /* Pods-SJListkit_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,21 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		31B09490EB954FAB5D811FC6CD13D1DD /* SJListkit */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6A0AD41B3F66B2FDF0965962EF2CE /* Adapter */,
+				8577E0D641D42BAF715AA354EAF5EE3B /* Controller */,
+				6F14BABF40EB53114441C3492379032F /* Model */,
+				999596BBD2A32CFC421D23990BD8A0C6 /* Pod */,
+				7D2F68068D8E633DD2BB75B16AF7A652 /* Protocol */,
+				80F94CBB771CE4CE4AC22819CA499255 /* Support Files */,
+				55A4A23E3F67914BBEDCB8B6449750DA /* View */,
+			);
+			name = SJListkit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		53CBAD793B15B23C5984343D6173798A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,32 +181,90 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B0B5943421B74B55870625376069A00F /* Support Files */ = {
+		55A4A23E3F67914BBEDCB8B6449750DA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				79484F5F859A2DB20CDAA99F7BD7AB73 /* SJListkit.xcconfig */,
-				B3318B23243E44FFAEC4F3811BD117E0 /* SJListkit-dummy.m */,
-				B28A2113CB143FF4EDE3C2F23DEAE42A /* SJListkit-prefix.pch */,
+				E8840F89DD21888ED68653C837471A29 /* SJCollectionViewCell.h */,
+				23635394A63B0C206403DF2576228920 /* SJCollectionViewCell.m */,
+			);
+			name = View;
+			path = SJListkit/Classes/View;
+			sourceTree = "<group>";
+		};
+		6F14BABF40EB53114441C3492379032F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D9B08B8C8FD4FC36143FFC2FBD89C54 /* SJCollectionViewCellModel.h */,
+				5B610AE7545926C0A71C51351134E5B8 /* SJCollectionViewCellModel.m */,
+				0789331D4C60FA41061EDD2E01D2B3E6 /* SJCollectionViewSectionModel.h */,
+				F869EC2165C058FC4702D99B9D709928 /* SJCollectionViewSectionModel.m */,
+			);
+			name = Model;
+			path = SJListkit/Classes/Model;
+			sourceTree = "<group>";
+		};
+		7D2F68068D8E633DD2BB75B16AF7A652 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6A99FD6599ABA4644520236B02E75878 /* SJCollectionCellModelProtocol.h */,
+				266AA4F0297FC2EC9787D9305FCE6324 /* SJCollectionViewCellProtocols.h */,
+				6468433B0B6FA25925C29682C15C79EA /* SJCollectionViewSectionModelProtocol.h */,
+				0C1C024724DAACD100EF7D94 /* SJCollectionModelProtocol.h */,
+			);
+			name = Protocol;
+			path = SJListkit/Classes/Protocol;
+			sourceTree = "<group>";
+		};
+		80F94CBB771CE4CE4AC22819CA499255 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4AF218C9D8D5FCF64D21D97D62AF79BE /* SJListkit.xcconfig */,
+				D407DA5171864D9E72E4928A755A5285 /* SJListkit-dummy.m */,
+				0B70ECB9E3AE9D597791DDE852733BA7 /* SJListkit-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SJListkit";
 			sourceTree = "<group>";
 		};
-		BA7240044AD530B01CB7876A8931D2AC /* Pod */ = {
+		8577E0D641D42BAF715AA354EAF5EE3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				58C68964861CFACB334995462323B23C /* LICENSE */,
-				898C6675FF4AA5E248E2955F75893430 /* README.md */,
-				95C8F5DA955CC14EFD3FABC494A4A939 /* SJListkit.podspec */,
+				2B5A537D862BA9C52613E6876A5E8459 /* SJBaseCollectionViewController.h */,
+				72714B194571CEA41B639F5682BB6C0E /* SJBaseCollectionViewController.m */,
+			);
+			name = Controller;
+			path = SJListkit/Classes/Controller;
+			sourceTree = "<group>";
+		};
+		999596BBD2A32CFC421D23990BD8A0C6 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B606770B9DFAE7A8AAAFA3BEE4DB9FEF /* LICENSE */,
+				1A78C183E533EDF035A2542C328015D9 /* README.md */,
+				95473935CA6E0B7E91FB39153D5ACA11 /* SJListkit.podspec */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		9FE6A0AD41B3F66B2FDF0965962EF2CE /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				4A0D93493E1EF16C9D051E6D4D8CF2CD /* SJCollectionViewAdapter.h */,
+				AEC08A322AE6536B2F0D1A4E1D09EEDD /* SJCollectionViewAdapter.m */,
+				A9B9BB637349AF6AE99EA18546169063 /* SJDispatcher.h */,
+				73BFC011B1F591A4ADF39ABE34A6B60C /* SJDispatcher.m */,
+				2B8F1D51FCA361318F3EEE1D6CC290FA /* SJMessageInterceptor.h */,
+				81E65670040A3379498C08759EB2485F /* SJMessageInterceptor.m */,
+			);
+			name = Adapter;
+			path = SJListkit/Classes/Adapter;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				F883FB59AA468999296E4B2EE3AE390A /* Development Pods */,
+				00BCCC970F73E828BCA96715292849DB /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				53CBAD793B15B23C5984343D6173798A /* Products */,
 				15D51DD39525416EA2A624DAB082554A /* Targets Support Files */,
@@ -193,70 +278,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D951EE4D509A3B637D6323E5CF155CFA /* SJListkit */ = {
-			isa = PBXGroup;
-			children = (
-				492E3E4C10EA53E8DDF7AAE486A2CF57 /* MessageInterceptor.h */,
-				4E4365A981AE048B3277D40E4D5326DA /* MessageInterceptor.m */,
-				012D0862B3D09CD314224FC4CD73FD0A /* SJBaseCollectionViewController.h */,
-				69EDBC834EC4DDE4B82AAD395AB3A121 /* SJBaseCollectionViewController.m */,
-				07CAFC3BB55126CE2F9FC2CF0431229E /* SJCollectionViewAdapter.h */,
-				713BF068EF948EF5CBEE7815FB670507 /* SJCollectionViewAdapter.m */,
-				A4C251A544012E04F5A8B74E4E6CF9D6 /* SJCollectionViewCell.h */,
-				A1C2334C4965DF156A0FF55CD67A24E4 /* SJCollectionViewCell.m */,
-				2A2DD8783C214F34DE3B056F13C31EBD /* SJCollectionViewCellModel.h */,
-				4FF6ADB052B7108710934EAD628DBE15 /* SJCollectionViewCellModel.m */,
-				4BDD7DF7F61DA684848FAABC0F72A10F /* SJCollectionViewCellProtocol.h */,
-				E0E0BDBE0DD7D06B757A0A97AA13B907 /* SJCollectionViewProtocols.h */,
-				95D71C1AE1E64C1E4F9BB5F28CEC6EDB /* SJCollectionViewSectionModel.h */,
-				F2FDF6A006BDA502D639492EF45D004B /* SJCollectionViewSectionModel.m */,
-				635172384AAA837114254A12918F9DE9 /* SJDispatcher.h */,
-				4E37EA1756EF790C7ABDD0E16A5B7DB3 /* SJDispatcher.m */,
-				BA7240044AD530B01CB7876A8931D2AC /* Pod */,
-				B0B5943421B74B55870625376069A00F /* Support Files */,
-			);
-			name = SJListkit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		F883FB59AA468999296E4B2EE3AE390A /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D951EE4D509A3B637D6323E5CF155CFA /* SJListkit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		38E9F062297D724E53458E77B8CFAD56 /* Headers */ = {
+		42426E8E3DD238BFDA3362E31A84D638 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4BA712F25DB2D130ACEA5B2479EC5D26 /* Headers */ = {
+		924F30DEC5F33FC361B1167ED52D0DA8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1D2A67A01957AE1AE9B991390CB2E0 /* SJBaseCollectionViewController.h in Headers */,
+				51F893D25115FF615CBF0D342DD89BED /* SJCollectionCellModelProtocol.h in Headers */,
+				E485B552372C813EC750A879DF1F2301 /* SJCollectionViewAdapter.h in Headers */,
+				8CCF1AAE67E4F9223B7190DF1A317577 /* SJCollectionViewCell.h in Headers */,
+				C097FECF59A3B6B650CE2B6A28312B78 /* SJCollectionViewCellModel.h in Headers */,
+				E9D411694D379D7F9D61B3319A281BEB /* SJCollectionViewCellProtocols.h in Headers */,
+				0C1C024824DAACD100EF7D94 /* SJCollectionModelProtocol.h in Headers */,
+				61BDCE6E40F0F1D796574AA5CB8E586D /* SJCollectionViewSectionModel.h in Headers */,
+				671B8208801D40D9956606B685800D41 /* SJCollectionViewSectionModelProtocol.h in Headers */,
+				02B3ABA863E2DCABED82D5549D2E96ED /* SJDispatcher.h in Headers */,
+				0C80C98A5A0DCFE007D3030026673CF4 /* SJMessageInterceptor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6AF9D87639F73B551593994710382BC /* Headers */ = {
+		E1A2D95949DA0CB3C64B0958CBC0A492 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48F279EE54547BD9AE69FE53FE139887 /* MessageInterceptor.h in Headers */,
-				2721D48358143CDBAAA9CFFD3D29906D /* SJBaseCollectionViewController.h in Headers */,
-				BE19707E039A278DF2D6038369EEEF73 /* SJCollectionViewAdapter.h in Headers */,
-				2FD32557F069128D020E15D46E87A21C /* SJCollectionViewCell.h in Headers */,
-				0AFE99540D3BB96C50A21386487C3632 /* SJCollectionViewCellModel.h in Headers */,
-				582EAE2644652888677529492674509C /* SJCollectionViewCellProtocol.h in Headers */,
-				66CB7E146ABA5D4554CD2EAE712A5A0B /* SJCollectionViewProtocols.h in Headers */,
-				DE97580795F04B8551B105294DE8C07E /* SJCollectionViewSectionModel.h in Headers */,
-				4389E3F0852DE406F340F84F875C5E34 /* SJDispatcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,16 +318,16 @@
 /* Begin PBXNativeTarget section */
 		554C020FD63E4B7D9F7B6171FD6A0EB9 /* Pods-SJListkit_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF22F549119C186AB6CDCDE6043840B0 /* Build configuration list for PBXNativeTarget "Pods-SJListkit_Tests" */;
+			buildConfigurationList = F0F6F3B41E2FB680304B1BFBB124DA48 /* Build configuration list for PBXNativeTarget "Pods-SJListkit_Tests" */;
 			buildPhases = (
-				38E9F062297D724E53458E77B8CFAD56 /* Headers */,
-				B03B779F9CED45FA2512038A69FEB92B /* Sources */,
-				EEE65E6F4EE181ACCDC8CD39DD43664F /* Frameworks */,
+				42426E8E3DD238BFDA3362E31A84D638 /* Headers */,
+				D789DDED7D7A9E9F196C4007C34C2910 /* Sources */,
+				75F8D7F10A60B3296D21FB61353200F0 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9C5603EB94973708E2F205358024C961 /* PBXTargetDependency */,
+				265AFFCD94AD98D0229263DCC9214AB9 /* PBXTargetDependency */,
 			);
 			name = "Pods-SJListkit_Tests";
 			productName = "Pods-SJListkit_Tests";
@@ -283,11 +336,11 @@
 		};
 		8EB0257EAC39C6BE3B81948C76B88D73 /* SJListkit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6697B497DB81B17B72D57A43014A981D /* Build configuration list for PBXNativeTarget "SJListkit" */;
+			buildConfigurationList = E9771C5691D5B10C5AE426A7B9DC3959 /* Build configuration list for PBXNativeTarget "SJListkit" */;
 			buildPhases = (
-				F6AF9D87639F73B551593994710382BC /* Headers */,
-				94B99F0A7F0E875A7647D0D46B0FFBF1 /* Sources */,
-				A83A3EF269A3C2BE57B6D8CD08414B91 /* Frameworks */,
+				924F30DEC5F33FC361B1167ED52D0DA8 /* Headers */,
+				9173CFDF40445D6EFC8961B60D0FD99B /* Sources */,
+				724191CCC14D98D904F6CABFB0F9036C /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,16 +353,16 @@
 		};
 		A1BDFC210385FA0EA29CEDCDF8822DFF /* Pods-SJListkit_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA19ABD18AA498D0661D3A31E964B30A /* Build configuration list for PBXNativeTarget "Pods-SJListkit_Example" */;
+			buildConfigurationList = EBC575469B86F275CED207622CCC90A6 /* Build configuration list for PBXNativeTarget "Pods-SJListkit_Example" */;
 			buildPhases = (
-				4BA712F25DB2D130ACEA5B2479EC5D26 /* Headers */,
-				E2DF9334B3E7BB3554D69D1108FC69A0 /* Sources */,
-				62830FC51693F76D1142FE60887E67B7 /* Frameworks */,
+				E1A2D95949DA0CB3C64B0958CBC0A492 /* Headers */,
+				8DACCCFD9D9F9816672672D9D6C8C5B8 /* Sources */,
+				195E4E5E9D7CBD6AD6EB858C22271F61 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				211C160CFB0B37EEBBB3B7C2005D85DD /* PBXTargetDependency */,
+				0E4F3EECCCF516D8D31F8446CD352F30 /* PBXTargetDependency */,
 			);
 			name = "Pods-SJListkit_Example";
 			productName = "Pods-SJListkit_Example";
@@ -346,78 +399,80 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		94B99F0A7F0E875A7647D0D46B0FFBF1 /* Sources */ = {
+		8DACCCFD9D9F9816672672D9D6C8C5B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A81C60A03F66F3F791306B77841F699 /* MessageInterceptor.m in Sources */,
-				4B818EC0AB2461FF8A9CB0AF9025493C /* SJBaseCollectionViewController.m in Sources */,
-				C97DE07070B5F0844857C6662BE8D50C /* SJCollectionViewAdapter.m in Sources */,
-				FDA35064BD19150085B6B8EF057C8CD0 /* SJCollectionViewCell.m in Sources */,
-				E014A65742B0AC1FE6CAC4CF0D1B7DC1 /* SJCollectionViewCellModel.m in Sources */,
-				E829B7CCC5C94D8684CD60F3E7188790 /* SJCollectionViewSectionModel.m in Sources */,
-				5A988F69DD418224051B5CBE40EAC6A3 /* SJDispatcher.m in Sources */,
-				AE895B7EB81CF013D10116FB2BCDED3A /* SJListkit-dummy.m in Sources */,
+				1B11A6D30C1DA86FC0863174CB86C3BA /* Pods-SJListkit_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B03B779F9CED45FA2512038A69FEB92B /* Sources */ = {
+		9173CFDF40445D6EFC8961B60D0FD99B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CAAC1FC209666F6B935C1879E76F580 /* Pods-SJListkit_Tests-dummy.m in Sources */,
+				1F84B108650F20101635BE2BA5AD2524 /* SJBaseCollectionViewController.m in Sources */,
+				26C752ACFF769B57343AC004790F08C6 /* SJCollectionViewAdapter.m in Sources */,
+				F25D25BC9F8DCC6D7724A64C748F8808 /* SJCollectionViewCell.m in Sources */,
+				726629453A406FF666887869CD50FD3C /* SJCollectionViewCellModel.m in Sources */,
+				69F40E1D494AA8A1EF0A888D753E8F41 /* SJCollectionViewSectionModel.m in Sources */,
+				0C136AC54C0490C25F09E08C87B8C402 /* SJDispatcher.m in Sources */,
+				3FD8B47AF28F70207EE505A79C4FADAB /* SJListkit-dummy.m in Sources */,
+				FC285B0CA6FBFBD53AD84E859DD3E934 /* SJMessageInterceptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2DF9334B3E7BB3554D69D1108FC69A0 /* Sources */ = {
+		D789DDED7D7A9E9F196C4007C34C2910 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BAA220AD930312754369F1F5AEB5347 /* Pods-SJListkit_Example-dummy.m in Sources */,
+				5FE24475FF1EE5DB35D30DC60F98D0CB /* Pods-SJListkit_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		211C160CFB0B37EEBBB3B7C2005D85DD /* PBXTargetDependency */ = {
+		0E4F3EECCCF516D8D31F8446CD352F30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SJListkit;
 			target = 8EB0257EAC39C6BE3B81948C76B88D73 /* SJListkit */;
-			targetProxy = 9973089D28CCC7C736A97FE151ADFC80 /* PBXContainerItemProxy */;
+			targetProxy = 89C40937569F4762C61A5ABE75C0B14C /* PBXContainerItemProxy */;
 		};
-		9C5603EB94973708E2F205358024C961 /* PBXTargetDependency */ = {
+		265AFFCD94AD98D0229263DCC9214AB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SJListkit_Example";
 			target = A1BDFC210385FA0EA29CEDCDF8822DFF /* Pods-SJListkit_Example */;
-			targetProxy = 9EFFAE29F1B2B3B8122683D03CBB6EF6 /* PBXContainerItemProxy */;
+			targetProxy = 734E5DC0CBD7A61DE1C3C44135B1DFD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0B0441BDC2F329FA289991C8FC0A5176 /* Release */ = {
+		1C03E0E4A3022EC4F3CBA857CB093641 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3300E685F98B2AC9A59F578CA3E0EB0E /* Pods-SJListkit_Example.release.xcconfig */;
+			baseConfigurationReference = 4AF218C9D8D5FCF64D21D97D62AF79BE /* SJListkit.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SJListkit/SJListkit-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SJListkit;
+				PRODUCT_NAME = SJListkit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		18769F46A36B766E8D40F967D5046A48 /* Debug */ = {
+		43867899D6583A3F8310C3E2746F82AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7934201E85281C450F1F8E9EFE2E7C1E /* Pods-SJListkit_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -491,12 +546,32 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		670BDD5C2BD5B6715C6E3D4CBE4CD3A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 320149A054ACD6CAEAC8D8D940E1EA8B /* Pods-SJListkit_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -562,9 +637,9 @@
 			};
 			name = Debug;
 		};
-		9C043FC22754D85DF6275803AC271A83 /* Release */ = {
+		A69BFB781E56D0A9F014C3C60D27805B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79484F5F859A2DB20CDAA99F7BD7AB73 /* SJListkit.xcconfig */;
+			baseConfigurationReference = 4AF218C9D8D5FCF64D21D97D62AF79BE /* SJListkit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -587,31 +662,29 @@
 			};
 			name = Release;
 		};
-		BC4D915EB4EBFF5D01C7F70602E7D56C /* Debug */ = {
+		BDDD21B3891451F1CBF280C561DCB3B5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79484F5F859A2DB20CDAA99F7BD7AB73 /* SJListkit.xcconfig */;
+			baseConfigurationReference = 3300E685F98B2AC9A59F578CA3E0EB0E /* Pods-SJListkit_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SJListkit/SJListkit-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SJListkit;
-				PRODUCT_NAME = SJListkit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		CAD11FF84FA00AE0A63CD961A7D61FFD /* Release */ = {
+		EC1EF34D17E45D1E13F6F21940C12099 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A620B7F8D12A104D70C1792F97B0E08 /* Pods-SJListkit_Tests.release.xcconfig */;
 			buildSettings = {
@@ -633,27 +706,6 @@
 			};
 			name = Release;
 		};
-		CC44DB72E17607C0744244447039D1B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 320149A054ACD6CAEAC8D8D940E1EA8B /* Pods-SJListkit_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -666,29 +718,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6697B497DB81B17B72D57A43014A981D /* Build configuration list for PBXNativeTarget "SJListkit" */ = {
+		E9771C5691D5B10C5AE426A7B9DC3959 /* Build configuration list for PBXNativeTarget "SJListkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC4D915EB4EBFF5D01C7F70602E7D56C /* Debug */,
-				9C043FC22754D85DF6275803AC271A83 /* Release */,
+				1C03E0E4A3022EC4F3CBA857CB093641 /* Debug */,
+				A69BFB781E56D0A9F014C3C60D27805B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA19ABD18AA498D0661D3A31E964B30A /* Build configuration list for PBXNativeTarget "Pods-SJListkit_Example" */ = {
+		EBC575469B86F275CED207622CCC90A6 /* Build configuration list for PBXNativeTarget "Pods-SJListkit_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC44DB72E17607C0744244447039D1B7 /* Debug */,
-				0B0441BDC2F329FA289991C8FC0A5176 /* Release */,
+				670BDD5C2BD5B6715C6E3D4CBE4CD3A0 /* Debug */,
+				BDDD21B3891451F1CBF280C561DCB3B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF22F549119C186AB6CDCDE6043840B0 /* Build configuration list for PBXNativeTarget "Pods-SJListkit_Tests" */ = {
+		F0F6F3B41E2FB680304B1BFBB124DA48 /* Build configuration list for PBXNativeTarget "Pods-SJListkit_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18769F46A36B766E8D40F967D5046A48 /* Debug */,
-				CAD11FF84FA00AE0A63CD961A7D61FFD /* Release */,
+				43867899D6583A3F8310C3E2746F82AF /* Debug */,
+				EC1EF34D17E45D1E13F6F21940C12099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

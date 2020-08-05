@@ -1,1 +1,1 @@
-../../../../../SJListkit/Classes/Adapter/SJCollectionViewSectionModel.h
+../../../../../SJListkit/Classes/Model/SJCollectionViewSectionModel.h

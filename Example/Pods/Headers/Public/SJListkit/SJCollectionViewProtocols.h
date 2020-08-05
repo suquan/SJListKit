@@ -1,1 +1,0 @@
-../../../../../SJListkit/Classes/Adapter/SJCollectionViewProtocols.h
