@@ -6,7 +6,7 @@
 //
 
 #import "SJCollectionViewAdapter.h"
-#import "SJCollectionViewCellProtocols.h"
+//#import "SJCollectionViewProtocols.h"
 #import "SJCollectionViewCell.h"
 #import "SJCollectionViewSectionModel.h"
 
@@ -48,7 +48,14 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    SJCollectionViewSectionModel *sectionModel = allSectionModels[indexPath.section];
+    if ([sectionModel respondsToSelector:@selector(sizeForItem)]) {
+        [sectionModel sizeForItem];
+    }
     
+    if ([self respondsToSelector:@selector(adaptersizeForItemWithCellModel:)]) {
+        [self adaptersizeForItemWithCellModel:sectionModel.cellModels[indexPath.row]];
+    }
     
     return CGSizeMake(100, 100);
 }
@@ -58,13 +65,13 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
-    if ([sectionModel respondsToSelector:@selector(sectionInsets)]) {
-        return [sectionModel sectionInsets];
+    if ([sectionModel respondsToSelector:@selector(insetForSection)]) {
+        return [sectionModel insetForSection];
     }
     
-//    if (self respondsToSelector:@selector(<#selector#>)) {
-//        <#statements#>
-//    }
+    if ([self respondsToSelector:@selector(adapterInsetForSection)]) {
+        [self adapterInsetForSection];
+    }
     
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
@@ -74,6 +81,14 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
+    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    if ([sectionModel respondsToSelector:@selector(minimumLineSpacing)]) {
+        return [sectionModel minimumLineSpacing];
+    }
+    
+    if ([self respondsToSelector:@selector(adapterMinimumLineSpacingForSection)]) {
+        [self adapterMinimumLineSpacingForSection];
+    }
     return 10;
 }
 
@@ -81,6 +96,14 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
+    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    if ([sectionModel respondsToSelector:@selector(minimumInteritemSpacing)]) {
+        [sectionModel minimumInteritemSpacing];
+    }
+    
+    if ([self respondsToSelector:@selector(adapterMinimumInteritemSpacingForSection)]) {
+        [self adapterMinimumInteritemSpacingForSection];
+    }
     return 10;
 }
 
@@ -88,6 +111,16 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
+    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    
+    if ([sectionModel respondsToSelector:@selector(referenceSizeForHeader)]) {
+        return [sectionModel referenceSizeForHeader];
+    }
+    
+    if ([self respondsToSelector:@selector(adapterSizeForHeaderWithModel:)]) {
+        [self adapterSizeForHeaderWithModel:sectionModel.headerModel];
+    }
+    
     return CGSizeMake(0, 0);
 }
 
@@ -95,6 +128,14 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
+    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    if ([sectionModel respondsToSelector:@selector(referenceSizeForFooter)]) {
+        [sectionModel referenceSizeForFooter];
+    }
+    
+    if ([self respondsToSelector:@selector(adapterSizeForFooterWithModel:)]) {
+        [self adapterSizeForFooterWithModel:sectionModel.footerModel];
+    }
     return CGSizeMake(0, 0);
 }
 
@@ -119,6 +160,10 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 //    }];
     
 }
+
+#pragma mark SJCollectionViewAdapterDelegate
+
+
 
 
 #pragma mark public

@@ -7,14 +7,23 @@
 
 #import <Foundation/Foundation.h>
 #import "SJCollectionViewCellModel.h"
+#import "SJCollectionViewHeaderFooterModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol SJCollectionViewCellProtocols <NSObject>
+@protocol SJCollectionViewCellProtocol <NSObject>
 
 @required
 
 @property (nonatomic, strong) SJCollectionViewCellModel *cellModel;
+
+@end
+
+@protocol SJCollectionViewHeaderFooterProtocol <NSObject>
+
+@required
+
+@property (nonatomic, strong) SJCollectionViewHeaderFooterModel *viewModel;
 
 @end
 

@@ -7,10 +7,12 @@
 
 #import <Foundation/Foundation.h>
 #import "SJCollectionViewCellModel.h"
+#import "SJCollectionSectionModelProtocol.h"
+#import "SJCollectionViewHeaderFooterModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SJCollectionViewSectionModel : NSObject
+@interface SJCollectionViewSectionModel : NSObject<SJCollectionSectionModelProtocol>
 
 @property (nonatomic, strong) NSMutableArray <SJCollectionViewCellModel *> *cellModels;
 
@@ -18,19 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) Class footerClass;
 
-// 布局相关
+@property (nonatomic, strong) SJCollectionViewHeaderFooterModel *headerModel;
 
-@property (nonatomic, assign) CGFloat minimumLineSpacing;
-
-@property (nonatomic, assign) CGFloat minimumInteritemSpacing;
-
-@property (nonatomic, assign) UIEdgeInsets sectionInsets;
+@property (nonatomic, strong) SJCollectionViewHeaderFooterModel *footerModel;
 
 @property (copy, nonatomic) NSString *sectionIdentifier;// section 唯一标识符
 
 @property (assign, nonatomic) NSInteger numberOfSectionsInAdapter;// 总共有多少section
-
-
 
 @end
 

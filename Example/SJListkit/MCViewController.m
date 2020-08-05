@@ -12,8 +12,11 @@
 #import "MCCellModel1.h"
 #import "MCAdapter1.h"
 #import "MCAdapter2.h"
+#import "MCSectionModel.h"
+#import "MCHeaderModel.h"
+#import "MCSectionModel1.h"
 
-@interface MCViewController ()
+@interface MCViewController ()<UICollectionViewDelegate>
 
 @property (nonatomic, strong) MCAdapter1 *adapter1;
 
@@ -33,13 +36,11 @@
     self.adapter1 = [[MCAdapter1 alloc]init];
     self.adapter1.collectionView = self.collectionView;
     self.adapter1.collectionViewDelegate = self;
-    self.adapter1.delegate = self;
     [self buildData1];
     
     self.adapter2 = [[MCAdapter2 alloc]init];
     self.adapter2.collectionView = self.collectionView;
     self.adapter2.collectionViewDelegate = self;
-    self.adapter2.delegate = self;
     [self buildData2];
 }
 
@@ -47,7 +48,7 @@
 {
     NSMutableArray *sections = [NSMutableArray array];
     for (int section = 0; section < 4; section ++) {
-        SJCollectionViewSectionModel *sectionModel = [[SJCollectionViewSectionModel alloc]init];
+        MCSectionModel *sectionModel = [[MCSectionModel alloc]init];
         sectionModel.sectionIdentifier = [NSString stringWithFormat:@"section_id_%@", @(section)];
         NSMutableArray *rows = [NSMutableArray array];
         for (int row = 0; row < 5; row ++) {
@@ -60,6 +61,9 @@
             [rows addObject:cellModel1];
         }
         sectionModel.cellModels = rows;
+        MCHeaderModel *headerModel = [[MCHeaderModel alloc]init];
+        headerModel.dataModel = [NSString stringWithFormat:@"header-%i",section];
+        sectionModel.headerModel = headerModel;
         [sections addObject:sectionModel];
     }
     
@@ -72,7 +76,7 @@
 {
     NSMutableArray *sections = [NSMutableArray array];
     for (int section = 0; section < 4; section ++) {
-        SJCollectionViewSectionModel *sectionModel = [[SJCollectionViewSectionModel alloc]init];
+        MCSectionModel1 *sectionModel = [[MCSectionModel1 alloc]init];
         sectionModel.sectionIdentifier = [NSString stringWithFormat:@"section_id_%@", @(section)];
         NSMutableArray *rows = [NSMutableArray array];
         for (int row = 0; row < 5; row ++) {

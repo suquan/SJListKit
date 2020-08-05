@@ -20,8 +20,6 @@
 //    return @"";
 //}
 
-@synthesize itemHeight;
-
 @synthesize identifier;
 
 @synthesize dataModel;

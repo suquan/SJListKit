@@ -13,13 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) id dataModel;
 
-@property (nonatomic, strong) Class cellClass;
+@property (nonatomic, assign) Class cellClass;
 
 @property (nonatomic,copy) NSString *identifier;
 
-@property (nonatomic, assign) CGFloat *itemHeight;
-
-@property (nonatomic, assign)CGSize sizeForItem;
 
 @end
 

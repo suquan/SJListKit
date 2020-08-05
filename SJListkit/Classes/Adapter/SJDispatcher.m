@@ -8,7 +8,7 @@
 
 #import "SJDispatcher.h"
 #import "SJCollectionViewSectionModel.h"
-#import "SJCollectionViewCellProtocols.h"
+#import "SJCollectionReuseProtocols.h"
 #import "SJMessageInterceptor.h"
 
 @interface SJDispatcher ()
@@ -62,15 +62,51 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
     Class cellClass = cellModel.cellClass;
     if (cellClass) {
         [collectionView registerClass:cellClass forCellWithReuseIdentifier:cellModel.identifier];
-        UICollectionViewCell <SJCollectionViewCellProtocols> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellModel.identifier forIndexPath:indexPath];
+        UICollectionViewCell <SJCollectionViewCellProtocol> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellModel.identifier forIndexPath:indexPath];
         
-        if ([cell conformsToProtocol:@protocol(SJCollectionViewCellProtocols)]) {
+        if ([cell conformsToProtocol:@protocol(SJCollectionViewCellProtocol)]) {
             cell.cellModel = cellModel;
         }
         
         return cell;
     }
     return [[UICollectionViewCell alloc]init];
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    SJCollectionViewSectionModel *sectionModel = [self sectionModelForIndexPath:indexPath];
+    if (kind == UICollectionElementKindSectionHeader) {
+        
+        SJCollectionViewHeaderFooterModel *headerModel = sectionModel.headerModel;
+        
+        if (headerModel.cellClass && headerModel.identifier) {
+            [collectionView registerClass:headerModel.cellClass forSupplementaryViewOfKind:kind withReuseIdentifier:headerModel.identifier];
+            
+            UICollectionReusableView <SJCollectionViewHeaderFooterProtocol>*header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerModel.identifier forIndexPath:indexPath];
+            
+            if ([header conformsToProtocol:@protocol(SJCollectionViewHeaderFooterProtocol)]) {
+                header.viewModel = headerModel;
+            }
+            return header;
+        }
+        
+        
+    }else if (kind == UICollectionElementKindSectionFooter){
+        SJCollectionViewHeaderFooterModel *footerModel = sectionModel.footerModel;
+        
+        if (footerModel.cellClass && footerModel.identifier) {
+            [collectionView registerClass:footerModel.cellClass forSupplementaryViewOfKind:kind withReuseIdentifier:footerModel.identifier];
+            
+            UICollectionReusableView <SJCollectionViewHeaderFooterProtocol>*footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerModel.identifier forIndexPath:indexPath];
+            
+            if ([footer conformsToProtocol:@protocol(SJCollectionViewHeaderFooterProtocol)]) {
+                footer.viewModel = footerModel;
+            }
+            return footer;
+        }
+    }
+    return nil;
 }
 
 

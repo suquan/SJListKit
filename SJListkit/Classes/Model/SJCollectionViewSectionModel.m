@@ -9,4 +9,28 @@
 
 @implementation SJCollectionViewSectionModel
 
+- (UIEdgeInsets)insetForSection {
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+- (CGFloat)minimumInteritemSpacing {
+    return 0;
+}
+
+- (CGFloat)minimumLineSpacing {
+    return 0;
+}
+
+- (CGSize)referenceSizeForFooter {
+    return CGSizeZero;
+}
+
+- (CGSize)referenceSizeForHeader {
+    return CGSizeZero;
+}
+
+- (CGSize)sizeForItem {
+    return CGSizeZero;
+}
+
 @end
