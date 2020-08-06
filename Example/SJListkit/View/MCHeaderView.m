@@ -31,6 +31,7 @@
 {
     [super setViewModel:viewModel];
     [self.label setText:viewModel.dataModel];
+    [self.label sizeToFit];
 }
 
 - (UILabel *)label

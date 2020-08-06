@@ -16,10 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableArray <SJCollectionViewCellModel *> *cellModels;
 
-@property (nonatomic, assign) Class headerClass;
-
-@property (nonatomic, assign) Class footerClass;
-
 @property (nonatomic, strong) SJCollectionViewHeaderFooterModel *headerModel;
 
 @property (nonatomic, strong) SJCollectionViewHeaderFooterModel *footerModel;

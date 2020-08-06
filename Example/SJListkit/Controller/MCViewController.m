@@ -15,6 +15,7 @@
 #import "MCSectionModel.h"
 #import "MCHeaderModel.h"
 #import "MCSectionModel1.h"
+#import <SJListkit/SJClient.h>
 
 @interface MCViewController ()<UICollectionViewDelegate>
 
@@ -64,6 +65,7 @@
         MCHeaderModel *headerModel = [[MCHeaderModel alloc]init];
         headerModel.dataModel = [NSString stringWithFormat:@"header-%i",section];
         sectionModel.headerModel = headerModel;
+        
         [sections addObject:sectionModel];
     }
     
