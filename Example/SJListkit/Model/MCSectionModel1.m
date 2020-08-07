@@ -10,4 +10,9 @@
 
 @implementation MCSectionModel1
 
+- (CGSize)referenceSizeForFooter
+{
+    return CGSizeMake(100, 100);
+}
+
 @end

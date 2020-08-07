@@ -50,11 +50,13 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 {
     SJCollectionViewSectionModel *sectionModel = allSectionModels[indexPath.section];
     if ([sectionModel respondsToSelector:@selector(sizeForItem)]) {
-        [sectionModel sizeForItem];
+        if (!CGSizeEqualToSize([sectionModel sizeForItem], CGSizeZero)) {
+            return [sectionModel sizeForItem];
+        }
     }
     
     if ([self respondsToSelector:@selector(adaptersizeForItemWithCellModel:)]) {
-        [self adaptersizeForItemWithCellModel:sectionModel.cellModels[indexPath.row]];
+        return [self adaptersizeForItemWithCellModel:sectionModel.cellModels[indexPath.row]];
     }
     
     return CGSizeMake(100, 100);
@@ -66,11 +68,13 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 {
     SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
     if ([sectionModel respondsToSelector:@selector(insetForSection)]) {
-        return [sectionModel insetForSection];
+        if (!UIEdgeInsetsEqualToEdgeInsets([sectionModel insetForSection], UIEdgeInsetsZero)) {
+            return [sectionModel insetForSection];
+        }
     }
     
     if ([self respondsToSelector:@selector(adapterInsetForSection)]) {
-        [self adapterInsetForSection];
+        return [self adapterInsetForSection];
     }
     
     return UIEdgeInsetsMake(0, 0, 0, 0);
@@ -83,11 +87,13 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 {
     SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
     if ([sectionModel respondsToSelector:@selector(minimumLineSpacing)]) {
-        return [sectionModel minimumLineSpacing];
+        if ([sectionModel minimumLineSpacing] > 0) {
+            return [sectionModel minimumLineSpacing];
+        }
     }
     
     if ([self respondsToSelector:@selector(adapterMinimumLineSpacingForSection)]) {
-        [self adapterMinimumLineSpacingForSection];
+        return [self adapterMinimumLineSpacingForSection];
     }
     return 10;
 }
@@ -98,11 +104,13 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 {
     SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
     if ([sectionModel respondsToSelector:@selector(minimumInteritemSpacing)]) {
-        [sectionModel minimumInteritemSpacing];
+        if ([sectionModel minimumInteritemSpacing] > 0) {
+            return [sectionModel minimumInteritemSpacing];
+        }
     }
     
     if ([self respondsToSelector:@selector(adapterMinimumInteritemSpacingForSection)]) {
-        [self adapterMinimumInteritemSpacingForSection];
+        return [self adapterMinimumInteritemSpacingForSection];
     }
     return 10;
 }
@@ -114,7 +122,9 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
     SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
     
     if ([sectionModel respondsToSelector:@selector(referenceSizeForHeader)]) {
-        return [sectionModel referenceSizeForHeader];
+        if (!CGSizeEqualToSize([sectionModel referenceSizeForHeader], CGSizeZero)) {
+            return [sectionModel referenceSizeForHeader];
+        }
     }
     
     if ([self respondsToSelector:@selector(adapterSizeForHeaderWithModel:)]) {
@@ -130,7 +140,9 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 {
     SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
     if ([sectionModel respondsToSelector:@selector(referenceSizeForFooter)]) {
-        [sectionModel referenceSizeForFooter];
+        if (!CGSizeEqualToSize([sectionModel referenceSizeForFooter], CGSizeZero)) {
+            return [sectionModel referenceSizeForFooter];
+        }
     }
     
     if ([self respondsToSelector:@selector(adapterSizeForFooterWithModel:)]) {

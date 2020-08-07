@@ -7,8 +7,7 @@
 //
 
 @import UIKit;
-#import <SJListkit/SJBaseCollectionViewController.h>
 
-@interface MCViewController : SJBaseCollectionViewController
+@interface MCViewController : UIViewController
 
 @end

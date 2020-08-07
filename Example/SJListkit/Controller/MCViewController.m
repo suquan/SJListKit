@@ -16,6 +16,8 @@
 #import "MCHeaderModel.h"
 #import "MCSectionModel1.h"
 #import <SJListkit/SJClient.h>
+#import <SJListkit/UIViewController+SJ.h>
+#import "MCFooterModel.h"
 
 @interface MCViewController ()<UICollectionViewDelegate>
 
@@ -34,15 +36,20 @@
     
     self.navigationItem.title = @"SJListKit";
     
+    [self.view addSubview:[self getCollectionView]];
+    [self getCollectionView].frame = self.view.bounds;
+    
     self.adapter1 = [[MCAdapter1 alloc]init];
-    self.adapter1.collectionView = self.collectionView;
+    self.adapter1.collectionView = [self getCollectionView];
     self.adapter1.collectionViewDelegate = self;
     [self buildData1];
     
     self.adapter2 = [[MCAdapter2 alloc]init];
-    self.adapter2.collectionView = self.collectionView;
+    self.adapter2.collectionView = [self getCollectionView];
     self.adapter2.collectionViewDelegate = self;
     [self buildData2];
+    
+    [self addAdapter:@[self.adapter1,self.adapter2]];
 }
 
 - (void)buildData1
@@ -68,9 +75,8 @@
         
         [sections addObject:sectionModel];
     }
-    
     self.adapter1.sectionModels = sections;
-    [self addAdapter:self.adapter1];
+//    [self addAdapter:@[self.adapter1]];
 }
 
 
@@ -91,10 +97,14 @@
             [rows addObject:cellModel1];
         }
         sectionModel.cellModels = rows;
+        
+        MCFooterModel *footerModel = [[MCFooterModel alloc]init];
+        footerModel.dataModel = [NSString stringWithFormat:@"header-%i",section];
+        sectionModel.footerModel = footerModel;
         [sections addObject:sectionModel];
     }
     
     self.adapter2.sectionModels = sections;
-    [self addAdapter:self.adapter2];
+//    [self addAdapter:self.adapter2];
 }
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0926F0C6249600DAD2F40CF7 /* libPods-SJListkit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E7BD0FCDC1C1809B37A3DE /* libPods-SJListkit_Example.a */; };
+		0C70939624DDBAFB005CB94E /* MCFooterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70939524DDBAFB005CB94E /* MCFooterModel.m */; };
+		0C70939924DDBB57005CB94E /* MCFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70939824DDBB57005CB94E /* MCFooterView.m */; };
 		0C7CE54D24DBA1AD00AD57A3 /* MCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE54C24DBA1AD00AD57A3 /* MCViewController.m */; };
 		0C7CE55324DBA1B700AD57A3 /* MCAdapter1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE54F24DBA1B700AD57A3 /* MCAdapter1.m */; };
 		0C7CE55424DBA1B700AD57A3 /* MCAdapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE55024DBA1B700AD57A3 /* MCAdapter2.m */; };
@@ -48,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		0C1F08952A9813F41A0AE84E /* libPods-SJListkit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJListkit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C70939424DDBAFB005CB94E /* MCFooterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCFooterModel.h; sourceTree = "<group>"; };
+		0C70939524DDBAFB005CB94E /* MCFooterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCFooterModel.m; sourceTree = "<group>"; };
+		0C70939724DDBB57005CB94E /* MCFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCFooterView.h; sourceTree = "<group>"; };
+		0C70939824DDBB57005CB94E /* MCFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCFooterView.m; sourceTree = "<group>"; };
 		0C7CE54B24DBA1AD00AD57A3 /* MCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCViewController.h; sourceTree = "<group>"; };
 		0C7CE54C24DBA1AD00AD57A3 /* MCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCViewController.m; sourceTree = "<group>"; };
 		0C7CE54F24DBA1B700AD57A3 /* MCAdapter1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAdapter1.m; sourceTree = "<group>"; };
@@ -154,6 +160,8 @@
 				0C7CE55B24DBA1C300AD57A3 /* MCCollectionViewCell.m */,
 				0C7CE55A24DBA1C300AD57A3 /* MCHeaderView.h */,
 				0C7CE55824DBA1C300AD57A3 /* MCHeaderView.m */,
+				0C70939724DDBB57005CB94E /* MCFooterView.h */,
+				0C70939824DDBB57005CB94E /* MCFooterView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +179,8 @@
 				0C7CE56324DBA1C300AD57A3 /* MCSectionModel1.m */,
 				0C7CE56024DBA1C300AD57A3 /* MCHeaderModel.h */,
 				0C7CE56624DBA1C300AD57A3 /* MCHeaderModel.m */,
+				0C70939424DDBAFB005CB94E /* MCFooterModel.h */,
+				0C70939524DDBAFB005CB94E /* MCFooterModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -432,6 +442,8 @@
 			files = (
 				0C7CE56924DBA1C300AD57A3 /* MCCollectionViewCell.m in Sources */,
 				0C7CE56B24DBA1C300AD57A3 /* MCCellModel.m in Sources */,
+				0C70939624DDBAFB005CB94E /* MCFooterModel.m in Sources */,
+				0C70939924DDBB57005CB94E /* MCFooterView.m in Sources */,
 				6003F59E195388D20070C39A /* MCAppDelegate.m in Sources */,
 				0C7CE56A24DBA1C300AD57A3 /* MCSectionModel.m in Sources */,
 				0C7CE55324DBA1B700AD57A3 /* MCAdapter1.m in Sources */,

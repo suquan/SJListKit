@@ -1,0 +1,1 @@
+../../../../../SJListkit/Classes/Protocol/SJCollectionCellModelProtocol.h
