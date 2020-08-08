@@ -10,6 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol MCCollectionViewCellDelegate <NSObject>
+
+- (void)MCCollectionViewCellClickBtn;
+
+@end
+
 @interface MCCollectionViewCell : SJCollectionViewCell
 
 @end

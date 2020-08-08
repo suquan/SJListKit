@@ -11,13 +11,11 @@
 
 @synthesize cellModel = _cellModel;
 
+@synthesize cellDelegate;
+
 - (void)setCellModel:(SJCollectionViewCellModel *)cellModel
 {
     NSAssert(NO, @"进入空实现");
 }
-
-
-
-
 
 @end

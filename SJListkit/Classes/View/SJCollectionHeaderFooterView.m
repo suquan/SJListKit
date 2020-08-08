@@ -9,6 +9,8 @@
 
 @implementation SJCollectionHeaderFooterView
 
-@synthesize viewModel;
+@synthesize headerFooterModel;
+
+@synthesize headerFooterDelegate;
 
 @end

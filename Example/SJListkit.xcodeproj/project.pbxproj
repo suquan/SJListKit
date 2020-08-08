@@ -10,6 +10,7 @@
 		0926F0C6249600DAD2F40CF7 /* libPods-SJListkit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E7BD0FCDC1C1809B37A3DE /* libPods-SJListkit_Example.a */; };
 		0C70939624DDBAFB005CB94E /* MCFooterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70939524DDBAFB005CB94E /* MCFooterModel.m */; };
 		0C70939924DDBB57005CB94E /* MCFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70939824DDBB57005CB94E /* MCFooterView.m */; };
+		0C70939C24DE2683005CB94E /* MCVTestHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70939B24DE2683005CB94E /* MCVTestHeader.m */; };
 		0C7CE54D24DBA1AD00AD57A3 /* MCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE54C24DBA1AD00AD57A3 /* MCViewController.m */; };
 		0C7CE55324DBA1B700AD57A3 /* MCAdapter1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE54F24DBA1B700AD57A3 /* MCAdapter1.m */; };
 		0C7CE55424DBA1B700AD57A3 /* MCAdapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE55024DBA1B700AD57A3 /* MCAdapter2.m */; };
@@ -54,6 +55,10 @@
 		0C70939524DDBAFB005CB94E /* MCFooterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCFooterModel.m; sourceTree = "<group>"; };
 		0C70939724DDBB57005CB94E /* MCFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCFooterView.h; sourceTree = "<group>"; };
 		0C70939824DDBB57005CB94E /* MCFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCFooterView.m; sourceTree = "<group>"; };
+		0C70939A24DE2683005CB94E /* MCVTestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCVTestHeader.h; sourceTree = "<group>"; };
+		0C70939B24DE2683005CB94E /* MCVTestHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCVTestHeader.m; sourceTree = "<group>"; };
+		0C70939E24DE390F005CB94E /* MCAdapter1Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAdapter1Protocol.h; sourceTree = "<group>"; };
+		0C70939F24DE396A005CB94E /* MCAdapter2Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAdapter2Protocol.h; sourceTree = "<group>"; };
 		0C7CE54B24DBA1AD00AD57A3 /* MCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCViewController.h; sourceTree = "<group>"; };
 		0C7CE54C24DBA1AD00AD57A3 /* MCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCViewController.m; sourceTree = "<group>"; };
 		0C7CE54F24DBA1B700AD57A3 /* MCAdapter1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAdapter1.m; sourceTree = "<group>"; };
@@ -131,11 +136,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C70939D24DE38F2005CB94E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0C70939E24DE390F005CB94E /* MCAdapter1Protocol.h */,
+				0C70939F24DE396A005CB94E /* MCAdapter2Protocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		0C7CE54A24DBA1AD00AD57A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				0C7CE54B24DBA1AD00AD57A3 /* MCViewController.h */,
 				0C7CE54C24DBA1AD00AD57A3 /* MCViewController.m */,
+				0C70939A24DE2683005CB94E /* MCVTestHeader.h */,
+				0C70939B24DE2683005CB94E /* MCVTestHeader.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -222,6 +238,7 @@
 		6003F593195388D20070C39A /* Example for SJListkit */ = {
 			isa = PBXGroup;
 			children = (
+				0C70939D24DE38F2005CB94E /* Protocols */,
 				0C7CE55C24DBA1C300AD57A3 /* Model */,
 				0C7CE55524DBA1C300AD57A3 /* View */,
 				0C7CE54E24DBA1B700AD57A3 /* Adapter */,
@@ -299,6 +316,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				CDD58EA1F205BD9BF2FDDFD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +429,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CDD58EA1F205BD9BF2FDDFD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SJListkit_Example/Pods-SJListkit_Example-frameworks.sh",
+				"${PODS_ROOT}/LookinServer/LookinServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SJListkit_Example/Pods-SJListkit_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E909E8BEED927B90E9BB875A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,6 +485,7 @@
 				0C7CE55324DBA1B700AD57A3 /* MCAdapter1.m in Sources */,
 				0C7CE54D24DBA1AD00AD57A3 /* MCViewController.m in Sources */,
 				0C7CE56C24DBA1C300AD57A3 /* MCSectionModel1.m in Sources */,
+				0C70939C24DE2683005CB94E /* MCVTestHeader.m in Sources */,
 				0C7CE55424DBA1B700AD57A3 /* MCAdapter2.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				0C7CE56E24DBA1C300AD57A3 /* MCHeaderModel.m in Sources */,

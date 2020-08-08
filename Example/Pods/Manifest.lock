@@ -1,16 +1,23 @@
 PODS:
+  - LookinServer (1.0.0)
   - SJListkit (0.1.0)
 
 DEPENDENCIES:
+  - LookinServer
   - SJListkit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - LookinServer
 
 EXTERNAL SOURCES:
   SJListkit:
     :path: "../"
 
 SPEC CHECKSUMS:
+  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   SJListkit: aa7c3f2f6a4e70cef7aa54f3805c5af402f17f01
 
-PODFILE CHECKSUM: 40f11d57d8072caa830ec8335de6a54f9bcdbe9f
+PODFILE CHECKSUM: d3efaaea59bb64135b085a1b806141ea390cbee7
 
 COCOAPODS: 1.8.4

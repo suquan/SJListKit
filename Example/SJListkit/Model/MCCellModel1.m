@@ -20,5 +20,10 @@
     return @"234";
 }
 
+- (CGSize)itemSize
+{
+    return CGSizeMake(100, 200);
+}
+
 
 @end

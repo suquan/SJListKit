@@ -7,7 +7,32 @@
 //
 
 #import "MCAdapter2.h"
+#import "MCAdapter2Protocol.h"
+#import <SJListkit/SJServiceMacro.h>
+#import "MCAdapter1Protocol.h"
+
+@interface MCAdapter2 ()
+
+
+@end
 
 @implementation MCAdapter2
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        ADD_SERVICE_CLIENT(MCAdapter2Protocol, self);
+    }
+    return self;
+}
+
+
+#pragma mark MCCollectionViewCellDelegate
+
+- (void)MCCollectionViewCellClickBtn
+{
+    SJSERVICE_CALL_CLIENT(MCAdapter1Protocol, @selector(adapter1changeText), adapter1changeText);
+}
 
 @end

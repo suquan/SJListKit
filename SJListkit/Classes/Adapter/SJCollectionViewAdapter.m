@@ -6,7 +6,6 @@
 //
 
 #import "SJCollectionViewAdapter.h"
-//#import "SJCollectionViewProtocols.h"
 #import "SJCollectionViewCell.h"
 #import "SJCollectionViewSectionModel.h"
 
@@ -27,14 +26,6 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
     });
 }
 
-- (void)setCollectionView:(UICollectionView *)collectionView
-{
-    _collectionView = collectionView;
-//    collectionView.delegate = (id <UICollectionViewDelegate>)self.delegateInterceptor;
-//    collectionView.dataSource = self;
-//    collectionView.delegate = self;
-}
-
 -(void)setSectionModels:(NSArray<SJCollectionViewSectionModel *> *)sectionModels
 {
     _sectionModels = sectionModels;
@@ -49,6 +40,14 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SJCollectionViewSectionModel *sectionModel = allSectionModels[indexPath.section];
+    
+    SJCollectionViewCellModel *cellModel =  sectionModel.cellModels[indexPath.row];
+    if ([cellModel respondsToSelector:@selector(itemSize)]) {
+        if (!CGSizeEqualToSize([cellModel itemSize], CGSizeZero)) {
+            return [cellModel itemSize];
+        }
+    }
+    
     if ([sectionModel respondsToSelector:@selector(sizeForItem)]) {
         if (!CGSizeEqualToSize([sectionModel sizeForItem], CGSizeZero)) {
             return [sectionModel sizeForItem];
@@ -59,7 +58,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
         return [self adaptersizeForItemWithCellModel:sectionModel.cellModels[indexPath.row]];
     }
     
-    return CGSizeMake(100, 100);
+    return CGSizeZero;
 }
 
 /// section 的上下左右 间距
@@ -77,7 +76,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
         return [self adapterInsetForSection];
     }
     
-    return UIEdgeInsetsMake(0, 0, 0, 0);
+    return UIEdgeInsetsZero;
 }
 
 
@@ -95,7 +94,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
     if ([self respondsToSelector:@selector(adapterMinimumLineSpacingForSection)]) {
         return [self adapterMinimumLineSpacingForSection];
     }
-    return 10;
+    return 0;
 }
 
 /// itemSpacing
@@ -112,7 +111,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
     if ([self respondsToSelector:@selector(adapterMinimumInteritemSpacingForSection)]) {
         return [self adapterMinimumInteritemSpacingForSection];
     }
-    return 10;
+    return 0;
 }
 
 /// header 的大小
@@ -131,7 +130,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
         [self adapterSizeForHeaderWithModel:sectionModel.headerModel];
     }
     
-    return CGSizeMake(0, 0);
+    return CGSizeZero;
 }
 
 /// footer 的大小
@@ -148,35 +147,8 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
     if ([self respondsToSelector:@selector(adapterSizeForFooterWithModel:)]) {
         [self adapterSizeForFooterWithModel:sectionModel.footerModel];
     }
-    return CGSizeMake(0, 0);
+    return CGSizeZero;
 }
-
-#pragma mark private
-- (void)_setupCellCountAndSectionCountForModels {
-//    [self.sectionModels enumerateObjectsUsingBlock:^(YHCollectionViewSectionModel * sectionModel, NSUInteger section, BOOL * _Nonnull stop) {
-//        sectionModel.numberOfSectionsInCollectionView = self.sectionModels.count;
-//        sectionModel.section = section;
-//
-//        [sectionModel.cellModels enumerateObjectsUsingBlock:^(YHCollectionViewCellModel * cellModel, NSUInteger item, BOOL * _Nonnull stop) {
-//            cellModel.numberOfItemsInSection = sectionModel.cellModels.count;
-//            cellModel.indexPath = [NSIndexPath indexPathForItem:item inSection:section];
-//        }];
-//
-//    }];
-    
-//    [self.sectionModels enumerateObjectsUsingBlock:^(SJCollectionViewSectionModel * _Nonnull sectionModel, NSUInteger idx, BOOL * _Nonnull stop) {
-//        sectionModel.numberOfSectionsInAdapter = self.sectionModels.count;
-//        [sectionModel.cellModels enumerateObjectsUsingBlock:^(SJCollectionViewCellModel * _Nonnull cellModel, NSUInteger idx, BOOL * _Nonnull stop) {
-//           cellModel.
-//        }];
-//    }];
-    
-}
-
-#pragma mark SJCollectionViewAdapterDelegate
-
-
-
 
 #pragma mark public
 
@@ -199,12 +171,11 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
     return nil;
 }
 
-//- (MessageInterceptor *)delegateInterceptor {
-//    if (_delegateInterceptor == nil) {
-//        _delegateInterceptor = [[MessageInterceptor alloc] init];
-//        _delegateInterceptor.middleMan = self;
-////        _delegateInterceptor.receiver = self.collectionViewDelegate;
-//    }
-//    return _delegateInterceptor;
-//}
+
+/// TODO  局部刷新
+- (void)reloadCurrentAdapter
+{
+    [self.collectionView reloadData];
+}
+
 @end

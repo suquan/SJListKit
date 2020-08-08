@@ -15,15 +15,17 @@
 #import "MCSectionModel.h"
 #import "MCHeaderModel.h"
 #import "MCSectionModel1.h"
-#import <SJListkit/SJClient.h>
 #import <SJListkit/UIViewController+SJ.h>
 #import "MCFooterModel.h"
+#import "MCVTestHeader.h"
 
 @interface MCViewController ()<UICollectionViewDelegate>
 
 @property (nonatomic, strong) MCAdapter1 *adapter1;
 
 @property (nonatomic, strong) MCAdapter2 *adapter2;
+
+@property (nonatomic, strong) UIButton *btn;
 
 @end
 
@@ -38,28 +40,31 @@
     
     [self.view addSubview:[self getCollectionView]];
     [self getCollectionView].frame = self.view.bounds;
-    
+
     self.adapter1 = [[MCAdapter1 alloc]init];
     self.adapter1.collectionView = [self getCollectionView];
     self.adapter1.collectionViewDelegate = self;
     [self buildData1];
-    
+
     self.adapter2 = [[MCAdapter2 alloc]init];
     self.adapter2.collectionView = [self getCollectionView];
     self.adapter2.collectionViewDelegate = self;
     [self buildData2];
-    
+
     [self addAdapter:@[self.adapter1,self.adapter2]];
+    
+//    [self.view addSubview:self.btn];
+//    self.btn.frame = CGRectMake(100, 100, 100, 100);
 }
 
 - (void)buildData1
 {
     NSMutableArray *sections = [NSMutableArray array];
-    for (int section = 0; section < 4; section ++) {
+    for (int section = 0; section < 2; section ++) {
         MCSectionModel *sectionModel = [[MCSectionModel alloc]init];
         sectionModel.sectionIdentifier = [NSString stringWithFormat:@"section_id_%@", @(section)];
         NSMutableArray *rows = [NSMutableArray array];
-        for (int row = 0; row < 5; row ++) {
+        for (int row = 0; row < 2; row ++) {
             MCCellModel *cellModel = [[MCCellModel alloc]init];
             cellModel.dataModel = [NSString stringWithFormat:@"%i - %i", section, row];
             [rows addObject:cellModel];
@@ -76,18 +81,17 @@
         [sections addObject:sectionModel];
     }
     self.adapter1.sectionModels = sections;
-//    [self addAdapter:@[self.adapter1]];
 }
 
 
 - (void)buildData2
 {
     NSMutableArray *sections = [NSMutableArray array];
-    for (int section = 0; section < 4; section ++) {
+    for (int section = 0; section < 2; section ++) {
         MCSectionModel1 *sectionModel = [[MCSectionModel1 alloc]init];
         sectionModel.sectionIdentifier = [NSString stringWithFormat:@"section_id_%@", @(section)];
         NSMutableArray *rows = [NSMutableArray array];
-        for (int row = 0; row < 5; row ++) {
+        for (int row = 0; row < 2; row ++) {
             MCCellModel *cellModel = [[MCCellModel alloc]init];
             cellModel.dataModel = [NSString stringWithFormat:@"%i - %i", section, row];
             [rows addObject:cellModel];
@@ -106,5 +110,22 @@
     
     self.adapter2.sectionModels = sections;
 //    [self addAdapter:self.adapter2];
+}
+
+
+- (UIButton *)btn
+{
+    if (!_btn) {
+        _btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+        _btn.backgroundColor = [UIColor redColor];
+    }
+    return _btn;
+}
+
+- (void)btnClick
+{
+    MCVTestHeader *testHeaderVC = [[MCVTestHeader alloc]init];
+    [self.navigationController pushViewController:testHeaderVC animated:YES];
 }
 @end

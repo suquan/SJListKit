@@ -59,6 +59,7 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SJCollectionViewCellModel *cellModel = [self cellModelForIndexPath:indexPath];
+    SJCollectionViewAdapter *adapter = [self adapterForIndexPath:indexPath];
     Class cellClass = cellModel.cellClass;
     if (cellClass) {
         [collectionView registerClass:cellClass forCellWithReuseIdentifier:cellModel.identifier];
@@ -66,6 +67,7 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
         
         if ([cell conformsToProtocol:@protocol(SJCollectionViewCellProtocol)]) {
             cell.cellModel = cellModel;
+            cell.cellDelegate = adapter;
         }
         
         return cell;
@@ -76,6 +78,7 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     SJCollectionViewSectionModel *sectionModel = [self sectionModelForIndexPath:indexPath];
+    SJCollectionViewAdapter *adapter = [self adapterForIndexPath:indexPath];
     if (kind == UICollectionElementKindSectionHeader) {
         
         SJCollectionViewHeaderFooterModel *headerModel = sectionModel.headerModel;
@@ -86,7 +89,8 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
             UICollectionReusableView <SJCollectionViewHeaderFooterProtocol>*header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerModel.identifier forIndexPath:indexPath];
             
             if ([header conformsToProtocol:@protocol(SJCollectionViewHeaderFooterProtocol)]) {
-                header.viewModel = headerModel;
+                header.headerFooterModel = headerModel;
+                header.headerFooterDelegate = adapter;
             }
             return header;
         }
@@ -101,7 +105,8 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
             UICollectionReusableView <SJCollectionViewHeaderFooterProtocol>*footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerModel.identifier forIndexPath:indexPath];
             
             if ([footer conformsToProtocol:@protocol(SJCollectionViewHeaderFooterProtocol)]) {
-                footer.viewModel = footerModel;
+                footer.headerFooterModel = footerModel;
+                footer.headerFooterDelegate = adapter;
             }
             return footer;
         }

@@ -21,15 +21,15 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self addSubview:self.label];
-        self.backgroundColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor yellowColor];
     }
     return self;
 }
 
-- (void)setViewModel:(SJCollectionViewHeaderFooterModel *)viewModel
+- (void)setHeaderFooterModel:(SJCollectionViewHeaderFooterModel *)headerModel
 {
-    [super setViewModel:viewModel];
-    [self.label setText:viewModel.dataModel];
+    [super setHeaderFooterModel:headerModel];
+    [self.label setText:headerModel.dataModel];
     [self.label sizeToFit];
 }
 

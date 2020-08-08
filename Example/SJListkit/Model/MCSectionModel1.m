@@ -12,7 +12,12 @@
 
 - (CGSize)referenceSizeForFooter
 {
-    return CGSizeMake(100, 100);
+    return CGSizeMake(0, 100);
+}
+
+- (CGSize)sizeForItem
+{
+    return CGSizeMake(200, 100);
 }
 
 @end

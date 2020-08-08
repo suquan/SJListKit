@@ -9,21 +9,13 @@
 
 @implementation SJCollectionViewCellModel
 
-//- (Class)cellClass
-//{
-//    return UICollectionViewCell.class;
-//}
-//
-//- (NSString *)identifier
-//{
-//    NSAssert(NO, @"没有设置Identifier");
-//    return @"";
-//}
 
 @synthesize identifier;
 
 @synthesize dataModel;
 
 @synthesize cellClass;
+
+@synthesize itemSize;
 
 @end

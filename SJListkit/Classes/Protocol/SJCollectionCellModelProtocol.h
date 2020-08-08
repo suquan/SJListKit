@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,copy) NSString *identifier;
 
+@property (nonatomic, assign) CGSize itemSize;
 
 @end
 

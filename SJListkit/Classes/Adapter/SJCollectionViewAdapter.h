@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol SJCollectionViewAdapterDelegate <NSObject>
 
+@optional
 
 - (CGSize)adaptersizeForItemWithCellModel:(SJCollectionViewCellModel *)cellModel;
 
@@ -41,6 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (SJCollectionViewSectionModel *)viewModelForSection:(NSInteger)section;
 
 - (SJCollectionViewCellModel *)cellModelForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)reloadCurrentAdapter;
 
 @end
 

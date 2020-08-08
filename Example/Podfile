@@ -3,6 +3,7 @@ platform :ios, '8.0'
 
 target 'SJListkit_Example' do
   pod 'SJListkit', :path => '../'
+  pod 'LookinServer', :configurations => ['Debug']
 
   target 'SJListkit_Tests' do
     inherit! :search_paths

@@ -7,10 +7,11 @@
 //
 
 #import "SJCollectionViewAdapter.h"
+#import "MCCollectionViewCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MCAdapter2 : SJCollectionViewAdapter
+@interface MCAdapter2 : SJCollectionViewAdapter<MCCollectionViewCellDelegate>
 
 @end
 

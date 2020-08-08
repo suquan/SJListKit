@@ -27,10 +27,10 @@
 }
 
 
-- (void)setViewModel:(SJCollectionViewHeaderFooterModel *)viewModel
+- (void)setHeaderFooterModel:(SJCollectionViewHeaderFooterModel *)headerFooterModel
 {
-    [super setViewModel:viewModel];
-    [self.label setText:viewModel.dataModel];
+    [super setHeaderFooterModel:headerFooterModel];
+    [self.label setText:headerFooterModel.dataModel];
     [self.label sizeToFit];
 }
 

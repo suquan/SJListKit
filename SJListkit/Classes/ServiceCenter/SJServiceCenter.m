@@ -55,9 +55,10 @@
         }
         [_clientLock lock];
         
-        [_clientCenter setObject:[[SJClient alloc]initWithObject:client] forKey:NSStringFromProtocol(key)];
+        [_clientCenter setObject:client forKey:NSStringFromProtocol(key)];
         
         [_clientLock unlock];
+        
     }
 }
 
@@ -72,13 +73,13 @@
     [_clientLock unlock];
 }
 
-- (SJClient *)clientWithkey:(SJServiceCenterKey)key
+- (id )clientWithkey:(SJServiceCenterKey)key
 {
     NSString *strKey = NSStringFromProtocol(key);
     
     [_clientLock lock];
     
-    SJClient *client = [_clientCenter objectForKey:strKey];
+    id client = [_clientCenter objectForKey:strKey];
     
     [_clientLock unlock];
     
@@ -101,13 +102,13 @@
     NSHashTable *clients = [self _getNotifyingSetWithKey:key];
     
     
-    [clients addObject:[[SJClient alloc]initWithObject:client]];
+    [clients addObject:client];
     
     
     [_notifyLock unlock];
 }
 
-- (NSHashTable <SJClient *> *)notifyingClientsWithKey:(SJServiceCenterKey)key
+- (NSHashTable *)notifyingClientsWithKey:(SJServiceCenterKey)key
 {
     return [self _getNotifyingSetWithKey:key];
 }
@@ -115,7 +116,7 @@
 
 #pragma mark private
 
-- (NSHashTable <SJClient *>*)_getNotifyingSetWithKey:(SJServiceCenterKey)key
+- (NSHashTable *)_getNotifyingSetWithKey:(SJServiceCenterKey)key
 {
     NSString *strKey = NSStringFromProtocol(key);
     NSHashTable *clients = nil;

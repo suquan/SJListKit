@@ -18,10 +18,9 @@
 
 #define SJSERVICE_CALL_CLIENT(protocolName, selector, func)\
 {\
-SJClient *__client__ = [[SJServiceCenter defaultCenter] clientWithkey:@protocol(protocolName)];\
-id obj = __client__.object;\
-if ([obj respondsToSelector:selector]) {\
-[obj func];\
+id __client__ = [[SJServiceCenter defaultCenter] clientWithkey:@protocol(protocolName)];\
+if ([__client__ respondsToSelector:selector]) {\
+[__client__ func];\
 }\
 }
 
@@ -29,10 +28,9 @@ if ([obj respondsToSelector:selector]) {\
 {\
 NSHashTable *__clientsHash__ = [[SJServiceCenter defaultCenter] notifyingClientsWithKey:@protocol(protocolName)];\
 NSArray *__clients__ = __clientsHash__.allObjects;\
-for (SJClient *client in __clients__) {\
-id obj = client.object;\
-if ([obj respondsToSelector:@selector()]) {\
-[obj func];\
+for (id client in __clients__) {\
+if ([client respondsToSelector:selector]) {\
+[client func];\
 }\
 }\
 }

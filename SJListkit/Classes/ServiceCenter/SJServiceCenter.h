@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SJClient.h"
 
 typedef Protocol *SJServiceCenterKey;
 
@@ -20,11 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)removeClientWithKey:(SJServiceCenterKey)key;
 
-- (SJClient *)clientWithkey:(SJServiceCenterKey)key;
+- (id )clientWithkey:(SJServiceCenterKey)key;
 
 - (void)addNotifyingClient:(id)client Key:(SJServiceCenterKey)key;
 
-- (NSHashTable <SJClient *> *)notifyingClientsWithKey:(SJServiceCenterKey)key;
+- (NSHashTable *)notifyingClientsWithKey:(SJServiceCenterKey)key;
 
 
 @end
