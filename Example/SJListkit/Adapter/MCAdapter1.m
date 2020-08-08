@@ -32,8 +32,4 @@
     [self reloadCurrentAdapter];
 }
 
-
-
-
-
 @end

@@ -30,6 +30,7 @@
 
 - (void)setCellModel:(SJCollectionViewCellModel *)cellModel
 {
+    [super setCellModel:cellModel];
     self.titleLabel.text = cellModel.dataModel;
     [self.titleLabel sizeToFit];
 }

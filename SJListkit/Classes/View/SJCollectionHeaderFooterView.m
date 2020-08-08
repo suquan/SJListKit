@@ -13,4 +13,9 @@
 
 @synthesize headerFooterDelegate;
 
+//-(void)setHeaderFooterModel:(SJCollectionViewHeaderFooterModel *)headerFooterModel
+//{
+//    NSAssert(NO, @"进入空实现");
+//}
+
 @end

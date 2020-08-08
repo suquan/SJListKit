@@ -9,13 +9,13 @@
 
 @implementation SJCollectionViewCell
 
-@synthesize cellModel = _cellModel;
+@synthesize cellModel;
 
 @synthesize cellDelegate;
 
-- (void)setCellModel:(SJCollectionViewCellModel *)cellModel
-{
-    NSAssert(NO, @"进入空实现");
-}
+//- (void)setCellModel:(SJCollectionViewCellModel *)cellModel
+//{
+//    NSAssert(NO, @"进入空实现");
+//}
 
 @end

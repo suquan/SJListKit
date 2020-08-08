@@ -15,4 +15,6 @@
 
 @synthesize identifier;
 
+@synthesize itemSize;
+
 @end

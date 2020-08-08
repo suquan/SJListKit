@@ -15,8 +15,6 @@
 
 @property(nonatomic, strong) NSMutableDictionary <NSString *,SJCollectionViewAdapter *>*sectionDict;
 
-//@property(nonatomic,strong) NSMutableDictionary * protocolDict;
-
 @property (nonatomic, strong) SJMessageInterceptor *interceptor;
 
 @property(nonatomic, strong) NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
@@ -255,13 +253,5 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
     }
     return _interceptor;
 }
-
-//- (NSMutableDictionary *)protocolDict
-//{
-//    if (!_protocolDict) {
-//        _protocolDict = [NSMutableDictionary dictionary];
-//    }
-//    return _protocolDict;
-//}
 
 @end

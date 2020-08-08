@@ -44,6 +44,7 @@
 
 - (void)setCellModel:(SJCollectionViewCellModel *)cellModel
 {
+    [super setCellModel:cellModel];
     self.titleLabel.text = cellModel.dataModel;
 }
 
