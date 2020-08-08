@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MCAdapter1 : SJCollectionViewAdapter<MCAdapter1Protocol>
+@interface MCAdapter1 : SJCollectionViewAdapter<MCAdapter1Protocol,UICollectionViewDelegate>
 
 @end
 

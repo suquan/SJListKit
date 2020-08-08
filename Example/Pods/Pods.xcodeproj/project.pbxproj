@@ -192,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				24450E4890159EA2385654060BB60D56 /* UIViewController+SJ.h */,
-				8115E0AE6AC59A62A977778D756977D0 /* UIViewController+SJ.m */,
 			);
 			name = Controller;
 			path = SJListkit/Classes/Controller;
@@ -272,6 +271,7 @@
 				5C82CC249171D4DA714F69FF19F501DF /* SJCollectionViewAdapter.m */,
 				4E3E07391B479BD7352514DFDEE95531 /* SJDispatcher.h */,
 				67B8BA2E123133FE2B6E76BBD0A18B4E /* SJDispatcher.m */,
+				8115E0AE6AC59A62A977778D756977D0 /* UIViewController+SJ.m */,
 				8659D1E93354FE42B272BC6B063301D9 /* SJMessageInterceptor.h */,
 				A6F71727C7CA261B783F9146D6041576 /* SJMessageInterceptor.m */,
 			);

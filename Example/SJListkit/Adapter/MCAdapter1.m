@@ -32,4 +32,9 @@
     [self reloadCurrentAdapter];
 }
 
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSLog(@"-点击了-%ld-%ld",(long)indexPath.section,(long)indexPath.row);
+//}
+
 @end

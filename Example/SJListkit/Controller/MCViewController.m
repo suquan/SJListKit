@@ -113,19 +113,25 @@
 }
 
 
-- (UIButton *)btn
-{
-    if (!_btn) {
-        _btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-        _btn.backgroundColor = [UIColor redColor];
-    }
-    return _btn;
-}
+//- (UIButton *)btn
+//{
+//    if (!_btn) {
+//        _btn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [_btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+//        _btn.backgroundColor = [UIColor redColor];
+//    }
+//    return _btn;
+//}
+//
+//- (void)btnClick
+//{
+//    MCVTestHeader *testHeaderVC = [[MCVTestHeader alloc]init];
+//    [self.navigationController pushViewController:testHeaderVC animated:YES];
+//}
 
-- (void)btnClick
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MCVTestHeader *testHeaderVC = [[MCVTestHeader alloc]init];
-    [self.navigationController pushViewController:testHeaderVC animated:YES];
+    NSLog(@"-点击了-%ld-%ld",(long)indexPath.section,(long)indexPath.row);
 }
 @end

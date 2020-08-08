@@ -45,6 +45,7 @@
 {
     if (!self.dispatcher) {
         SJDispatcher *dispatcher = [[SJDispatcher alloc]init];
+        dispatcher.controllerDelegate = self;
         [self setDispatcher:dispatcher];
     }
     return self.dispatcher;

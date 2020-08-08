@@ -21,8 +21,6 @@
 
 @end
 
-static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
-
 @implementation SJDispatcher
 
 
@@ -36,6 +34,12 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
     }
     [self.allSectionModels addObjectsFromArray:adapter.sectionModels];
     
+}
+
+-(void)setControllerDelegate:(id)controllerDelegate
+{
+    _controllerDelegate = controllerDelegate;
+    self.interceptor.secondInterceptor = controllerDelegate;
 }
 
 
@@ -114,6 +118,16 @@ static NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
 
 
 #pragma mark UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self updateInterceptorWithIndexPath:indexPath];
+    if ([self.interceptor respondsToSelector:_cmd]) {
+        [self.interceptor collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    }
+}
+
+#pragma mark UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {

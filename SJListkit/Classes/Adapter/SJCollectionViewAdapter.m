@@ -11,6 +11,7 @@
 
 @interface SJCollectionViewAdapter ()
 
+@property(nonatomic, strong) NSMutableSet *indexsInAdapter;
 
 @end
 
@@ -29,6 +30,10 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 -(void)setSectionModels:(NSArray<SJCollectionViewSectionModel *> *)sectionModels
 {
     _sectionModels = sectionModels;
+    for (NSUInteger i = 0; i < sectionModels.count; i++) {
+        NSUInteger index = i + allSectionModels.count;
+        [self.indexsInAdapter addObject:@(index)];
+    }
     [allSectionModels addObjectsFromArray:sectionModels];
 }
 
@@ -176,6 +181,21 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 - (void)reloadCurrentAdapter
 {
     [self.collectionView reloadData];
+    
+//    NSIndexSet *set = [NSIndexSet indexSetWithIndex:<#(NSUInteger)#>]
+    
+//    self.collectionView reloadSections:(nonnull NSIndexSet *)
+}
+
+
+#pragma mark getter
+
+- (NSMutableSet *)indexsInAdapter
+{
+    if (!_indexsInAdapter) {
+        _indexsInAdapter = [[NSMutableSet alloc]init];
+    }
+    return _indexsInAdapter;
 }
 
 @end
