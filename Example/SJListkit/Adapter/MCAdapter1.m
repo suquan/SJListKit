@@ -29,6 +29,8 @@
         section.headerModel.dataModel = [NSString stringWithFormat:@"suzhengquan-%@",str];
     }
     
+    [self.sectionModels removeLastObject];
+    
     [self reloadCurrentAdapter];
 }
 

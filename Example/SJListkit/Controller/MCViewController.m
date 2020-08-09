@@ -43,12 +43,12 @@
 
     self.adapter1 = [[MCAdapter1 alloc]init];
     self.adapter1.collectionView = [self getCollectionView];
-    self.adapter1.collectionViewDelegate = self;
+//    self.adapter1.collectionViewDelegate = self;
     [self buildData1];
 
     self.adapter2 = [[MCAdapter2 alloc]init];
     self.adapter2.collectionView = [self getCollectionView];
-    self.adapter2.collectionViewDelegate = self;
+//    self.adapter2.collectionViewDelegate = self;
     [self buildData2];
 
     [self addAdapter:@[self.adapter1,self.adapter2]];

@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,weak)id controllerDelegate;
 
-- (void)digestAdapter:(SJCollectionViewAdapter *)adapter;
+- (void)digestAdapters:(NSArray<SJCollectionViewAdapter *> *)adapters;
+
+- (void)updateDataSource;
 
 @end
 

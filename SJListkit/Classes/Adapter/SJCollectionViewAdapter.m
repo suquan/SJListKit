@@ -8,34 +8,35 @@
 #import "SJCollectionViewAdapter.h"
 #import "SJCollectionViewCell.h"
 #import "SJCollectionViewSectionModel.h"
+#import "SJDispatcher.h"
 
 @interface SJCollectionViewAdapter ()
 
-@property(nonatomic, strong) NSMutableSet *indexsInAdapter;
+//@property(nonatomic, strong) NSMutableArray *indexsInAdapter;
 
 @end
 
-static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
+//static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 @implementation SJCollectionViewAdapter
 
-+ (void)load
-{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        allSectionModels = [NSMutableArray array];
-    });
-}
+//+ (void)load
+//{
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        allSectionModels = [NSMutableArray array];
+//    });
+//}
 
--(void)setSectionModels:(NSArray<SJCollectionViewSectionModel *> *)sectionModels
-{
-    _sectionModels = sectionModels;
-    for (NSUInteger i = 0; i < sectionModels.count; i++) {
-        NSUInteger index = i + allSectionModels.count;
-        [self.indexsInAdapter addObject:@(index)];
-    }
-    [allSectionModels addObjectsFromArray:sectionModels];
-}
+//-(void)setSectionModels:(NSArray<SJCollectionViewSectionModel *> *)sectionModels
+//{
+//    _sectionModels = sectionModels;
+////    for (NSUInteger i = 0; i < sectionModels.count; i++) {
+////        NSUInteger index = i + allSectionModels.count;
+////        [self.indexsInAdapter addObject:@(index)];
+////    }
+////    [allSectionModels addObjectsFromArray:sectionModels];
+//}
 
 #pragma mark UICollectionViewDelegate
 //这里需要处理优先级，Adapter  优先级高低 cellModel/sectionModel > adapter 子类
@@ -44,7 +45,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SJCollectionViewSectionModel *sectionModel = allSectionModels[indexPath.section];
+    SJCollectionViewSectionModel *sectionModel = self.allSectionModels[indexPath.section];
     
     SJCollectionViewCellModel *cellModel =  sectionModel.cellModels[indexPath.row];
     if ([cellModel respondsToSelector:@selector(itemSize)]) {
@@ -70,7 +71,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    SJCollectionViewSectionModel *sectionModel = self.allSectionModels[section];
     if ([sectionModel respondsToSelector:@selector(insetForSection)]) {
         if (!UIEdgeInsetsEqualToEdgeInsets([sectionModel insetForSection], UIEdgeInsetsZero)) {
             return [sectionModel insetForSection];
@@ -89,7 +90,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    SJCollectionViewSectionModel *sectionModel = self.allSectionModels[section];
     if ([sectionModel respondsToSelector:@selector(minimumLineSpacing)]) {
         if ([sectionModel minimumLineSpacing] > 0) {
             return [sectionModel minimumLineSpacing];
@@ -106,7 +107,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    SJCollectionViewSectionModel *sectionModel = self.allSectionModels[section];
     if ([sectionModel respondsToSelector:@selector(minimumInteritemSpacing)]) {
         if ([sectionModel minimumInteritemSpacing] > 0) {
             return [sectionModel minimumInteritemSpacing];
@@ -123,7 +124,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    SJCollectionViewSectionModel *sectionModel = self.allSectionModels[section];
     
     if ([sectionModel respondsToSelector:@selector(referenceSizeForHeader)]) {
         if (!CGSizeEqualToSize([sectionModel referenceSizeForHeader], CGSizeZero)) {
@@ -142,7 +143,7 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
-    SJCollectionViewSectionModel *sectionModel = allSectionModels[section];
+    SJCollectionViewSectionModel *sectionModel = self.allSectionModels[section];
     if ([sectionModel respondsToSelector:@selector(referenceSizeForFooter)]) {
         if (!CGSizeEqualToSize([sectionModel referenceSizeForFooter], CGSizeZero)) {
             return [sectionModel referenceSizeForFooter];
@@ -178,24 +179,43 @@ static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 
 /// TODO  局部刷新
-- (void)reloadCurrentAdapter
+- (void)reloadCurrentAdapter 
 {
+    
+//    根据当前adapter的数据更新 索引 更新allSectionModels
+//    for (NSNumber *index in self.indexsInAdapter) {
+//        [allSectionModels removeObjectAtIndex:index.intValue];
+//    }
+//    NSNumber *firstIndex = self.indexsInAdapter.firstObject;
+//    [self.indexsInAdapter removeAllObjects];
+//    
+//    for (NSInteger i = self.sectionModels.count -1 ; i >= 0; i--) {
+//        SJCollectionViewSectionModel *sectionModel = self.sectionModels[i];
+//        [allSectionModels insertObject:sectionModel atIndex:firstIndex.intValue];
+//        [self.indexsInAdapter insertObject:@(i + firstIndex.intValue) atIndex:0];
+//    }
+    
+    if ([self.dispatcherDelegate respondsToSelector:@selector(updateDataSource)]) {
+        [self.dispatcherDelegate updateDataSource];
+    }
+    
+//    不完美的局部刷新
+//    for (NSNumber *index in self.indexsInAdapter) {
+//        NSIndexSet *set = [[NSIndexSet alloc]initWithIndex:index.intValue];
+//        [self.collectionView reloadSections:set];
+//    }
     [self.collectionView reloadData];
-    
-//    NSIndexSet *set = [NSIndexSet indexSetWithIndex:<#(NSUInteger)#>]
-    
-//    self.collectionView reloadSections:(nonnull NSIndexSet *)
 }
 
 
 #pragma mark getter
 
-- (NSMutableSet *)indexsInAdapter
-{
-    if (!_indexsInAdapter) {
-        _indexsInAdapter = [[NSMutableSet alloc]init];
-    }
-    return _indexsInAdapter;
-}
+//- (NSMutableArray *)indexsInAdapter
+//{
+//    if (!_indexsInAdapter) {
+//        _indexsInAdapter = [NSMutableArray array];
+//    }
+//    return _indexsInAdapter;
+//}
 
 @end

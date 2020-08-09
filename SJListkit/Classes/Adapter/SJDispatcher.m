@@ -19,6 +19,8 @@
 
 @property(nonatomic, strong) NSMutableArray <SJCollectionViewSectionModel *> *allSectionModels;
 
+@property(nonatomic, strong) NSMutableArray <SJCollectionViewAdapter *> *allAdapters;
+
 @end
 
 @implementation SJDispatcher
@@ -36,7 +38,27 @@
     
 }
 
--(void)setControllerDelegate:(id)controllerDelegate
+- (void)digestAdapters:(NSArray<SJCollectionViewAdapter *> *)adapters
+{
+    [self.allAdapters removeAllObjects];
+    [self.allAdapters addObjectsFromArray:adapters];
+    [self updateDataSource];
+}
+
+///更新数据源
+- (void)updateDataSource
+{
+    [self.allSectionModels removeAllObjects];
+    [self.sectionDict removeAllObjects];
+    for (int i = 0; i < self.allAdapters.count; i++) {
+        SJCollectionViewAdapter *adapter = self.allAdapters[i];
+        adapter.dispatcherDelegate = self;
+        adapter.allSectionModels = self.allSectionModels;
+        [self digestAdapter:self.allAdapters[i]];
+    }
+}
+
+- (void)setControllerDelegate:(id)controllerDelegate
 {
     _controllerDelegate = controllerDelegate;
     self.interceptor.secondInterceptor = controllerDelegate;
@@ -260,12 +282,20 @@
     return _allSectionModels;
 }
 
--(SJMessageInterceptor *)interceptor
+- (SJMessageInterceptor *)interceptor
 {
     if (!_interceptor) {
         _interceptor = [[SJMessageInterceptor alloc]init];
     }
     return _interceptor;
+}
+
+-(NSMutableArray<SJCollectionViewAdapter *> *)allAdapters
+{
+    if (!_allAdapters) {
+        _allAdapters = [NSMutableArray array];
+    }
+    return _allAdapters;
 }
 
 @end

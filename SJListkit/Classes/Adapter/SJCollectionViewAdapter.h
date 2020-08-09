@@ -33,9 +33,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) UICollectionView *collectionView;
 
-@property(nonatomic,weak)id <UICollectionViewDelegate> collectionViewDelegate;
+@property(nonatomic,weak)id dispatcherDelegate;
 
-@property (strong, nonatomic) NSArray <SJCollectionViewSectionModel *> *sectionModels;
+@property (strong, nonatomic) NSMutableArray <SJCollectionViewSectionModel *> *sectionModels;
+
+@property (strong, nonatomic)NSArray <SJCollectionViewSectionModel *> *allSectionModels;
 
 - (SJCollectionViewSectionModel *)viewModelForSection:(NSInteger)section;
 

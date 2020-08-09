@@ -22,9 +22,7 @@
 
 - (void)addAdapter:(NSArray <SJCollectionViewAdapter *>*)adapters
 {
-    for (SJCollectionViewAdapter *adapter in adapters) {
-        [self.dispatcher digestAdapter:adapter];
-    }
+    [self.dispatcher digestAdapters:adapters];
     [[self getCollectionView] reloadData];
 }
 
