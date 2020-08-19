@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/suquan/SJListkit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'suquan' => 'suzhengquan@mucang.cn' }
+  s.author           = { 'suquan' => 'suzhengquan@suzhengquan.cn' }
   s.source           = { :git => 'https://github.com/suquan/SJListkit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

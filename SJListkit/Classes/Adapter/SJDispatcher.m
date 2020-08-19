@@ -256,11 +256,11 @@
 
 - (void)nullImplementcheckIInDebug
 {
-    #ifdef DEBUG
+#ifdef DEBUG
     NSLog(@"%s",__func__);
     NSLog(@"%p",_cmd);
     NSAssert(NO, @"存在空实现");
-    #endif
+#endif
 }
 
 

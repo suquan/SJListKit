@@ -17,7 +17,6 @@
 #import "MCSectionModel1.h"
 #import <SJListkit/UIViewController+SJ.h>
 #import "MCFooterModel.h"
-#import "MCVTestHeader.h"
 
 @interface MCViewController ()<UICollectionViewDelegate>
 
@@ -112,22 +111,6 @@
 //    [self addAdapter:self.adapter2];
 }
 
-
-//- (UIButton *)btn
-//{
-//    if (!_btn) {
-//        _btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [_btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-//        _btn.backgroundColor = [UIColor redColor];
-//    }
-//    return _btn;
-//}
-//
-//- (void)btnClick
-//{
-//    MCVTestHeader *testHeaderVC = [[MCVTestHeader alloc]init];
-//    [self.navigationController pushViewController:testHeaderVC animated:YES];
-//}
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

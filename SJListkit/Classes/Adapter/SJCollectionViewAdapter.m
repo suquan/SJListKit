@@ -12,31 +12,10 @@
 
 @interface SJCollectionViewAdapter ()
 
-//@property(nonatomic, strong) NSMutableArray *indexsInAdapter;
-
 @end
 
-//static NSMutableArray<SJCollectionViewSectionModel *> *allSectionModels;
 
 @implementation SJCollectionViewAdapter
-
-//+ (void)load
-//{
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        allSectionModels = [NSMutableArray array];
-//    });
-//}
-
-//-(void)setSectionModels:(NSArray<SJCollectionViewSectionModel *> *)sectionModels
-//{
-//    _sectionModels = sectionModels;
-////    for (NSUInteger i = 0; i < sectionModels.count; i++) {
-////        NSUInteger index = i + allSectionModels.count;
-////        [self.indexsInAdapter addObject:@(index)];
-////    }
-////    [allSectionModels addObjectsFromArray:sectionModels];
-//}
 
 #pragma mark UICollectionViewDelegate
 //这里需要处理优先级，Adapter  优先级高低 cellModel/sectionModel > adapter 子类
@@ -210,12 +189,5 @@
 
 #pragma mark getter
 
-//- (NSMutableArray *)indexsInAdapter
-//{
-//    if (!_indexsInAdapter) {
-//        _indexsInAdapter = [NSMutableArray array];
-//    }
-//    return _indexsInAdapter;
-//}
 
 @end

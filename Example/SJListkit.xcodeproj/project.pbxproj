@@ -10,7 +10,6 @@
 		0926F0C6249600DAD2F40CF7 /* libPods-SJListkit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E7BD0FCDC1C1809B37A3DE /* libPods-SJListkit_Example.a */; };
 		0C70939624DDBAFB005CB94E /* MCFooterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70939524DDBAFB005CB94E /* MCFooterModel.m */; };
 		0C70939924DDBB57005CB94E /* MCFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70939824DDBB57005CB94E /* MCFooterView.m */; };
-		0C70939C24DE2683005CB94E /* MCVTestHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70939B24DE2683005CB94E /* MCVTestHeader.m */; };
 		0C7CE54D24DBA1AD00AD57A3 /* MCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE54C24DBA1AD00AD57A3 /* MCViewController.m */; };
 		0C7CE55324DBA1B700AD57A3 /* MCAdapter1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE54F24DBA1B700AD57A3 /* MCAdapter1.m */; };
 		0C7CE55424DBA1B700AD57A3 /* MCAdapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7CE55024DBA1B700AD57A3 /* MCAdapter2.m */; };
@@ -55,8 +54,6 @@
 		0C70939524DDBAFB005CB94E /* MCFooterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCFooterModel.m; sourceTree = "<group>"; };
 		0C70939724DDBB57005CB94E /* MCFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCFooterView.h; sourceTree = "<group>"; };
 		0C70939824DDBB57005CB94E /* MCFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCFooterView.m; sourceTree = "<group>"; };
-		0C70939A24DE2683005CB94E /* MCVTestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCVTestHeader.h; sourceTree = "<group>"; };
-		0C70939B24DE2683005CB94E /* MCVTestHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCVTestHeader.m; sourceTree = "<group>"; };
 		0C70939E24DE390F005CB94E /* MCAdapter1Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAdapter1Protocol.h; sourceTree = "<group>"; };
 		0C70939F24DE396A005CB94E /* MCAdapter2Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAdapter2Protocol.h; sourceTree = "<group>"; };
 		0C7CE54B24DBA1AD00AD57A3 /* MCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCViewController.h; sourceTree = "<group>"; };
@@ -81,7 +78,7 @@
 		0C7CE56424DBA1C300AD57A3 /* MCCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCellModel.h; sourceTree = "<group>"; };
 		0C7CE56524DBA1C300AD57A3 /* MCCellModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCellModel1.m; sourceTree = "<group>"; };
 		0C7CE56624DBA1C300AD57A3 /* MCHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHeaderModel.m; sourceTree = "<group>"; };
-		20638B8D6A84FB93A20C125D /* SJListkit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SJListkit.podspec; path = ../SJListkit.podspec; sourceTree = "<group>"; };
+		20638B8D6A84FB93A20C125D /* SJListkit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SJListkit.podspec; path = ../SJListkit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* SJListkit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJListkit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,8 +147,6 @@
 			children = (
 				0C7CE54B24DBA1AD00AD57A3 /* MCViewController.h */,
 				0C7CE54C24DBA1AD00AD57A3 /* MCViewController.m */,
-				0C70939A24DE2683005CB94E /* MCVTestHeader.h */,
-				0C70939B24DE2683005CB94E /* MCVTestHeader.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -485,7 +480,6 @@
 				0C7CE55324DBA1B700AD57A3 /* MCAdapter1.m in Sources */,
 				0C7CE54D24DBA1AD00AD57A3 /* MCViewController.m in Sources */,
 				0C7CE56C24DBA1C300AD57A3 /* MCSectionModel1.m in Sources */,
-				0C70939C24DE2683005CB94E /* MCVTestHeader.m in Sources */,
 				0C7CE55424DBA1B700AD57A3 /* MCAdapter2.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				0C7CE56E24DBA1C300AD57A3 /* MCHeaderModel.m in Sources */,

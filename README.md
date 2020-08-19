@@ -22,7 +22,7 @@ pod 'SJListkit'
 
 ## Author
 
-suquan, suzhengquan@mucang.cn
+suquan, suzhengquan@suzhengquan.cn
 
 ## License
 

@@ -7,7 +7,7 @@ DEPENDENCIES:
   - SJListkit (from `../`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - LookinServer
 
 EXTERNAL SOURCES:
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
-  SJListkit: aa7c3f2f6a4e70cef7aa54f3805c5af402f17f01
+  SJListkit: 41abb4fa440912479da3452248473d30a6c2439b
 
 PODFILE CHECKSUM: d3efaaea59bb64135b085a1b806141ea390cbee7
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5
