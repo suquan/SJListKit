@@ -6,14 +6,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### 架构设计
 ##### 整体架构设计
-![](https://upload-images.jianshu.io/upload_images/1170876-60a838fa1ae2ca2e.jpg)
+![](./pics/6.jpg)
 - 外部Controller 不需要继承，引入分类就有了全部的VC的功能。
 - 页面显示考数据驱动，组装SJCollectionViewAdapter 子类实例对象，内部装填SJCollectionViewSectionModel 数组，这个是collectionView 的section对应的模型。加工好的数据调用**addAdapter：**函数就可以自动生成界面了。
 - 控制页面显示大小的代理方法，也经过了内部分发，确定了优先级。对于cell来讲，优先级 cellModel > sectionModel >  adapter > 外部传入VC 
 
 #### adapter 之间的通信
 设计adapter的初衷除了将不同的类型的section 隔离开来，将本来放在控制器里的逻辑移到adapter中来，另一个出发点是希望不同的adapter之间能够建立通信功能，一旦每个adapter中的逻辑复杂起来，这种通信是必要的。
-![](https://upload-images.jianshu.io/upload_images/1170876-98a19041628dbfe6.jpg)
+![](./pics/7.jpg)
 
 SJServiceMacro 是一个定义的宏，这个宏使得adapter 之间的通信只需要一行代码就能解决。
 #### SJMessageInterceptor 
@@ -61,7 +61,7 @@ SJServiceMacro 是一个定义的宏，这个宏使得adapter 之间的通信只
     [self addAdapter:@[self.adapter1,self.adapter2]];
 ```
 
-![](https://upload-images.jianshu.io/upload_images/1170876-4d68d09a25af3638.jpg)
+![](./pics/8.jpg)
 
 adapter之间的通信体现在点击adapter2中的绿色按钮，adapter1 中的section 会减少。
 
