@@ -22,7 +22,7 @@
 
 - (CGSize)itemSize
 {
-    return CGSizeMake(100, 200);
+    return CGSizeMake(100, 50);
 }
 
 

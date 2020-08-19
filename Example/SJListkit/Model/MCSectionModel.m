@@ -12,7 +12,7 @@
 
 - (CGSize)referenceSizeForHeader
 {
-    return CGSizeMake(0, 200);
+    return CGSizeMake(0, 50);
 }
 
 - (CGSize)sizeForItem
