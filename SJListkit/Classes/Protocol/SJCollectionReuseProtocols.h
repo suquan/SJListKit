@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 
-@property (nonatomic, strong) SJCollectionViewCellModel *cellModel;
+@property (nonatomic, strong) id<SJCollectionViewCellProtocol> cellModel;
 
 @property(nonatomic, weak) id cellDelegate;
 
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 
-@property (nonatomic, strong) SJCollectionViewHeaderFooterModel *headerFooterModel;
+@property (nonatomic, strong) id<SJCollectionCellModelProtocol> headerFooterModel;
 
 @property(nonatomic, weak) id headerFooterDelegate;
 

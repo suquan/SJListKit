@@ -7,6 +7,8 @@
 //
 
 #import "MCCollectionViewCell1.h"
+#import "MCCellModel1.h"
+#import "MCCellModel.h"
 
 @interface MCCollectionViewCell1 ()
 
@@ -27,12 +29,19 @@
     return self;
 }
 
-
-- (void)setCellModel:(SJCollectionViewCellModel *)cellModel
+// 这个一个cell 可以处理多种不同的model 类型，可以做策略模式
+-(void)setCellModel:(id<SJCollectionViewCellProtocol>)cellModel
 {
     [super setCellModel:cellModel];
-    self.titleLabel.text = cellModel.dataModel;
-    [self.titleLabel sizeToFit];
+    if ([cellModel isKindOfClass:[MCCellModel1 class]]) {
+        MCCellModel1 *model = (MCCellModel1 *)cellModel;
+        self.titleLabel.text = model.dataModel;
+        [self.titleLabel sizeToFit];
+    }else if ([cellModel isKindOfClass:[MCCellModel class]]){// 不同的模型可以有不同的显示逻辑
+//        ...
+    }
+    
+
 }
 
 - (UILabel *)titleLabel
