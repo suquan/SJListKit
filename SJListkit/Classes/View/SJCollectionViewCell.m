@@ -13,9 +13,9 @@
 
 @synthesize cellDelegate;
 
-//- (void)setCellModel:(SJCollectionViewCellModel *)cellModel
-//{
-//    NSAssert(NO, @"进入空实现");
-//}
+-(void)setCellModel:(id<SJCollectionViewCellProtocol>)newCellModel NS_REQUIRES_SUPER
+{
+    cellModel = newCellModel;
+}
 
 @end

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SJCollectionViewCell : UICollectionViewCell<SJCollectionViewCellProtocol>
 
+-(void)setCellModel:(id<SJCollectionViewCellProtocol>)newCellModel NS_REQUIRES_SUPER;
+
 @end
 
 NS_ASSUME_NONNULL_END

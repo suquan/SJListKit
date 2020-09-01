@@ -7,6 +7,7 @@
 //
 
 #import "MCCollectionViewCell.h"
+#import "MCCellModel.h"
 
 @interface MCCollectionViewCell ()
 
@@ -42,10 +43,13 @@
 }
 
 
-- (void)setCellModel:(SJCollectionViewCellModel *)cellModel
+- (void)setCellModel:(id<SJCollectionViewCellProtocol>)newCellModel
 {
-    [super setCellModel:cellModel];
-    self.titleLabel.text = cellModel.dataModel;
+    [super setCellModel:newCellModel];
+    if ([newCellModel isKindOfClass:[MCCellModel class]]) {
+        MCCellModel *cellModel = (MCCellModel *)newCellModel;
+        self.titleLabel.text = cellModel.dataModel;
+    }
 }
 
 
