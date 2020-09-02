@@ -16,6 +16,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ![](./pics/7.jpg)
 
 SJServiceMacro 是一个定义的宏，这个宏使得adapter 之间的通信只需要一行代码就能解决。
+
+
+
+#### SJMessageInterceptor 
+
+内部adapter的存储，_notifyCenter 和 _clientCenter 是一个NSMapTable (dictionary 的通用类型)对象，对内部持有对象是weak引用，  _notifyCenter 中对同一个key保存的实例，使用NSHashTable（set 的通用类型）。保证使用方不需要额外处理内存问题，serviceCenter 不会有额外的引用。
+
 #### SJMessageInterceptor 
 消息转发妙用
 在**SJDispatcher**中，需要去分发消息 分别给adapter 和 外部的Controller，使用SJMessageInterceptor 的消息转发，根据配置转发的优先级，以简化代码。
