@@ -19,7 +19,7 @@ SJServiceMacro 是一个定义的宏，这个宏使得adapter 之间的通信只
 
 
 
-#### SJMessageInterceptor 
+#### SJServiceCenter 
 
 内部adapter的存储，_notifyCenter 和 _clientCenter 是一个NSMapTable (dictionary 的通用类型)对象，对内部持有对象是weak引用，  _notifyCenter 中对同一个key保存的实例，使用NSHashTable（set 的通用类型）。保证使用方不需要额外处理内存问题，serviceCenter 不会有额外的引用。
 
